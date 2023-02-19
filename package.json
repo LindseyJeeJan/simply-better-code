@@ -21,10 +21,12 @@
     "react-router-dom": "^6.8.0",
     "react-scripts": "5.0.1",
     "sass": "^1.57.1",
+    "source-map-explorer": "^2.5.3",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "analyze": "source-map-explorer 'dist/static/js/*.js'",
     "serve": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
