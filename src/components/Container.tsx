@@ -1,16 +1,22 @@
 import React from 'react';
-import { Box, Heading, Paragraph } from 'grommet';
+import { Box, Heading, Header, Footer, Text, Page } from 'grommet';
 
 function Main() {
   return (
     <>
-      <Box pad='small'>
-        <header></header>
-        <main className='app-main'>
-          <Heading>Simply Better Code</Heading>
-          <Paragraph>This is a paragraph</Paragraph>
+      <Box className='app-main'>
+        <Header pad='medium' align='center' justify='end'>
+          <Text>About</Text>
+        </Header>
+        <main>
+          <Page kind='full' fill='horizontal' pad='medium' align='center' justify='center'>
+            <Heading>Simply Better Code</Heading>
+            <p>This is a paragraph</p>
+          </Page>
         </main>
-        <footer></footer>
+        <Footer pad='medium' align='center' justify='end'>
+          <Text>&copy;2023</Text>
+        </Footer>
       </Box>
     </>
   );
