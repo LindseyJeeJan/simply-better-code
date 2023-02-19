@@ -15,6 +15,7 @@ module.exports = exports = {
   ],
   rules: {
     'no-duplicate-imports': 'error',
+    'unused-imports/no-unused-imports-ts': 'error',
   },
   overrides: [
     {
@@ -22,4 +23,4 @@ module.exports = exports = {
       rules: {},
     },
   ],
-}
+};
