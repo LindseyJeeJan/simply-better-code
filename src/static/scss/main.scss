@@ -1,0 +1,12 @@
+@use 'core/normalize';
+@use 'core/reset';
+@use 'base';
+@use 'components';
+@use 'layouts';
+@use 'mixins';
+@use 'typography';
+@use 'variables';
+
+body {
+  margin: 0;
+}
