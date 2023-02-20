@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, Heading, Page, Paragraph, Text } from 'grommet';
 import Tutorials from './Tutorials';
-import { CodeBlock } from 'react-code-blocks';
 
 export default function TutorialForms() {
   const tutorialName: string = Tutorials[0].title;
