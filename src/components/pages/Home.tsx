@@ -1,11 +1,15 @@
 import React from 'react';
-import { Heading, Page, Paragraph } from 'grommet';
+import { Heading, Page, Paragraph, Text } from 'grommet';
 
 export default function Home() {
   return (
     <Page kind='full' fill='horizontal' pad='medium' align='center' justify='center'>
-      <Heading>Simply Better Code</Heading>
-      <Paragraph fill={true}>...because better code doesn&apos;t have to be complicated</Paragraph>
+      <Heading level={1}>
+        <Text size='string'>Simply better code</Text>
+      </Heading>
+      <Paragraph fill={true}>
+        &hellip;because accessible code doesn&apos;t have to be complicated
+      </Paragraph>
     </Page>
   );
 }
