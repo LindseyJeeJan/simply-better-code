@@ -1,11 +1,11 @@
 @import '/src/static/scss/variables';
 
 body {
+  color: $dark-color;
   font-family: 'Noto Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #282c34;
 }
 
 code {
@@ -18,6 +18,7 @@ h3,
 h4,
 h5,
 h6 {
+  color: $dark-color;
   font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   line-height: 150%;
@@ -53,7 +54,7 @@ svg.link {
 }
 
 .nav__link {
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 .uppercase {

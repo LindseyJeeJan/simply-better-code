@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, Image, Page, Paragraph, Text } from 'grommet';
+import { Box, Heading, Page, Paragraph, Text } from 'grommet';
 
 export default function TutorialForms() {
   return (

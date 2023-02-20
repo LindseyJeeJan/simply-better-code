@@ -1,6 +1,8 @@
+@import '/src/static/scss/variables';
+
 .image-cropper {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
@@ -9,5 +11,29 @@
     margin: 0 auto;
     height: 100%;
     width: auto;
+  }
+}
+
+.nav-list {
+  margin: 0;
+  width: 100%;
+
+  .nav-list__item {
+    .nav-list__link {
+      border-radius: 0;
+      border-bottom: 1px solid #ddd;
+      display: block;
+      padding: 1rem;
+
+      &:hover {
+        background-color: #e2ebf0;
+      }
+
+      svg {
+        path {
+          stroke: $link-color;
+        }
+      }
+    }
   }
 }
