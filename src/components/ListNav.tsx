@@ -29,16 +29,16 @@ function NavLayout() {
             color={'light'}
             href='/tutorial-forms'
             icon={<Book />}
-            label='Building an accessible forms using React'
+            label='building accessible forms using React'
           />
         </li>
         <li className='nav-list__item'>
           <Anchor
             className='nav-list__link'
             color={'light'}
-            href='#'
+            href='/tutorial-todo-list'
             icon={<Book />}
-            label='Placeholder link to longer tutorial name'
+            label='building an accessible todo list using React'
           />
         </li>
       </ul>

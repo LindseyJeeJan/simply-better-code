@@ -5,6 +5,7 @@ import About from 'components/pages/About';
 import Home from 'components/pages/Home';
 import ErrorPage from 'components/pages/Error';
 import TutorialForms from './pages/TutorialForms';
+import TutorialTodoList from './pages/TutorialTodoList';
 import NavBar from 'components/Nav';
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: '/tutorial-forms',
     element: <TutorialForms />,
+  },
+  {
+    path: '/tutorial-todo-list',
+    element: <TutorialTodoList />,
   },
 ]);
 

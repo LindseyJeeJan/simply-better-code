@@ -5,7 +5,7 @@ export default function About() {
   return (
     <Page kind='full' fill='horizontal' pad='medium' align='center'>
       <Heading level={1}>
-        <Text size='string'>Hello</Text>
+        <Text size='string'>hello</Text>
       </Heading>
       <Box pad={'large'}>
         <div className='columns'>

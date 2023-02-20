@@ -7,7 +7,7 @@ export default function Home() {
     <Page kind='full' fill='horizontal' pad='medium' align='center' justify='center'>
       <Box pad={'xlarge'}>
         <Heading level={1}>
-          <Text size='string'>Simply Better Code</Text>
+          <Text size='string'>simply better code</Text>
         </Heading>
         <Paragraph fill={true}>
           &hellip;because accessible code doesn&apos;t have to be complicated
@@ -15,7 +15,7 @@ export default function Home() {
       </Box>
       <Box pad={'xlarge'} fill='horizontal'>
         <Heading level={2}>
-          <Text size='string'>Tutorials</Text>
+          <Text size='string'>tutorials</Text>
         </Heading>
         <ListNav />
       </Box>
