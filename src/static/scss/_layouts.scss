@@ -1,1 +1,29 @@
+@import 'mixins';
 
+.app-main {
+  background-color: whitesmoke;
+  height: 100vh;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0 4em;
+
+  @include phone-breakpoint {
+    flex-wrap: wrap;
+  }
+
+  .col-2 {
+    flex-basis: calc(50%);
+
+    @include phone-breakpoint {
+      margin-bottom: 1rem;
+      flex-basis: 100%;
+    }
+  }
+}
+
+.left-margin-auto {
+  margin-left: auto;
+}

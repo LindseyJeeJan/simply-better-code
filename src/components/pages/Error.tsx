@@ -9,7 +9,7 @@ export default function ErrorPage() {
   return (
     <Box id='error-page' justify='center'>
       <Heading level={1}>
-        <Text size='string'>Oops</Text>
+        <Text size='string'>Oops!</Text>
       </Heading>
       <Paragraph fill={true}>Sorry, an unexpected error has occurred.</Paragraph>
       <Paragraph fill={true}>

@@ -1,10 +1,10 @@
 import React from 'react';
-import { createBrowserRouter, Link, NavLink, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Avatar, Anchor, Box, Footer, Header, Nav, Text } from 'grommet';
 import About from 'components/pages/About';
 import Home from 'components/pages/Home';
 import ErrorPage from 'components/pages/Error';
-
+import NavBar from 'components/Nav';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -25,10 +25,7 @@ export default function Container() {
       <Box className='app-main'>
         <Header pad='medium' align='center' justify='between'>
           <Avatar src={gravatarSrc} />
-          <Nav direction='row' gap='medium' align='center'>
-            <Anchor color={'light'} href='/' className='nav__link' label='Home' />
-            <Anchor color={'light'} href='/about' className='nav__link' label='About' />
-          </Nav>
+          <NavBar />
         </Header>
         <main>
           <RouterProvider router={router} />
