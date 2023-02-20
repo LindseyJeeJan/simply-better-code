@@ -5,11 +5,11 @@ import uuid from 'react-uuid';
 const navLocations = [
   {
     href: '/',
-    label: 'Home',
+    label: 'home',
   },
   {
     href: '/about',
-    label: 'About',
+    label: 'about',
   },
 ];
 
@@ -19,7 +19,13 @@ const navItems = navLocations.map((link) => (
 
 export default function NavBar() {
   return (
-    <Nav aria-label='main navigation' direction='row' gap='medium' align='center'>
+    <Nav
+      className='main-nav'
+      aria-label='main navigation'
+      direction='row'
+      gap='medium'
+      align='center'
+    >
       {navItems}
     </Nav>
   );

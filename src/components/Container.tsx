@@ -4,8 +4,8 @@ import { Avatar, Box, Footer, Header, Text } from 'grommet';
 import About from 'components/pages/About';
 import Home from 'components/pages/Home';
 import ErrorPage from 'components/pages/Error';
-import TutorialForms from './pages/TutorialForms';
-import TutorialTodoList from './pages/TutorialTodoList';
+import TutorialForms from './pages/tutorials/TutorialForms';
+import TutorialTodoList from './pages/tutorials/TutorialTodoList';
 import NavBar from 'components/Nav';
 const router = createBrowserRouter([
   {

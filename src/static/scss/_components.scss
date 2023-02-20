@@ -19,9 +19,13 @@
   width: 100%;
 
   .nav-list__item {
-    .nav-list__link {
-      border-radius: 0;
+    &::after {
+      content: '';
+      display: block;
       border-bottom: 1px solid #ddd;
+    }
+
+    .nav-list__link {
       display: block;
       padding: 1rem;
 
@@ -34,6 +38,16 @@
           stroke: $link-color;
         }
       }
+      &:focus-visible {
+        background-color: #eee2f0;
+      }
     }
+  }
+}
+
+.main-nav {
+  a {
+    border-radius: $border-radius-base;
+    padding: 7px;
   }
 }

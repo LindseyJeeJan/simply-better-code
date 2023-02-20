@@ -5,9 +5,26 @@
 @use 'layouts';
 @use 'mixins';
 @use 'typography';
-@use 'variables';
+@import 'variables';
 
 main {
   display: flex;
   justify-content: center;
+}
+
+a,
+button,
+input,
+textarea {
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  &:focus-visible {
+    outline: 3px solid $focus-color;
+  }
+}
+
+a:focus-visible {
+  background-color: #eee2f0;
 }

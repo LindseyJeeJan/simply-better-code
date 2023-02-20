@@ -31,10 +31,6 @@ a,
   border-radius: $border-radius-base;
   color: $link-color;
   cursor: pointer;
-  &:focus,
-  &:focus-visible {
-    outline-offset: 3px;
-  }
 }
 
 p {

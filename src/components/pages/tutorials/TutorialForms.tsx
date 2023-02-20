@@ -5,7 +5,7 @@ export default function TutorialForms() {
   return (
     <Page kind='full' fill='horizontal' pad='medium' align='center'>
       <Heading level={1}>
-        <Text size='string'>Tutorial Forms</Text>
+        <Text size='string'>Building Forms</Text>
       </Heading>
       <Box pad={'large'}>
         <Paragraph fill={true}>Text here</Paragraph>
