@@ -36,7 +36,6 @@
     "webpack-dev-server": "^4.11.1"
   },
   "scripts": {
-    "analyze": "source-map-explorer 'dist/static/js/*.js'",
     "serve": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
