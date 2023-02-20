@@ -13,7 +13,7 @@ export default function ErrorPage() {
       </Heading>
       <Paragraph fill={true}>Sorry, an unexpected error has occurred.</Paragraph>
       <Paragraph fill={true}>
-        <Text size='string'>{error.statusText || error.message}</Text>
+        <Text size='string'>{error?.statusText || error?.message}</Text>
       </Paragraph>
     </Box>
   );

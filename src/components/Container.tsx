@@ -1,9 +1,10 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Avatar, Anchor, Box, Footer, Header, Nav, Text } from 'grommet';
+import { Avatar, Box, Footer, Header, Text } from 'grommet';
 import About from 'components/pages/About';
 import Home from 'components/pages/Home';
 import ErrorPage from 'components/pages/Error';
+import TutorialForms from './pages/TutorialForms';
 import NavBar from 'components/Nav';
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: '/about',
     element: <About />,
+  },
+  {
+    path: '/tutorial-forms',
+    element: <TutorialForms />,
   },
 ]);
 
