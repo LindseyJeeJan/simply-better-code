@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Page kind='full' fill='horizontal' pad='medium' align='center' justify='center'>
       <Box pad={'xlarge'}>
-        <Heading level={1}>
+        <Heading level={1} textAlign='center'>
           <Text size='string'>simply better code</Text>
         </Heading>
         <Paragraph fill={true}>
