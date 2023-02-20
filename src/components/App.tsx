@@ -11,12 +11,10 @@ const theme = {
   },
 };
 
-function App() {
+export default function App() {
   return (
     <Grommet theme={theme} full>
       <Container />
     </Grommet>
   );
 }
-
-export default App;

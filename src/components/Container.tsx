@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Header, Footer, Text } from 'grommet';
 import Home from 'components/pages/Home';
 
-function Main() {
+export default function Container() {
   return (
     <>
       <Box className='app-main'>
@@ -19,5 +19,3 @@ function Main() {
     </>
   );
 }
-
-export default Main;
