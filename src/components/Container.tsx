@@ -9,7 +9,7 @@ import TutorialTodoList from './pages/tutorials/TutorialTodoList';
 import NavBar from 'components/Nav';
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '*',
     element: <Home />,
     errorElement: <ErrorPage />,
   },
