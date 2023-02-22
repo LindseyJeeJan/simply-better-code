@@ -17,24 +17,24 @@ export default function ListNav() {
       {/* Routes nest inside one another. Nested route paths build upon
             parent route paths, and nested route elements render inside
             parent route elements. See the note about <Outlet> below. */}
-      <Routes>
+      {/* <Routes>
         <Route path='*' element={<NavLayout />}>
           <Route path='*' element={<ErrorPage />} />
         </Route>
-      </Routes>
+      </Routes> */}
     </>
   );
 }
 
 const tutorialItems = Tutorials.map((tutorial: Tutorial) => (
   <li className='nav-list__item' key={uuid()}>
-    <Anchor
+    {/* <Anchor
       className='nav-list__link'
       color={'light'}
       href={tutorial.href}
       icon={<Book />}
       label={tutorial.title}
-    />
+    /> */}
   </li>
 ));
 

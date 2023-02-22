@@ -1,14 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 // import { Provider } from 'react-redux';
 import 'static/scss/main.scss';
 import App from 'components/App';
+import About from 'components/pages/About';
+import Home from 'components/pages/Home';
+import Error from 'components/pages/Error';
 
 // import store from 'store/store';
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: '/about',
+        element: <About />,
+      },
+    ],
+  },
+]);
+
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
+  <RouterProvider router={router} />,
+
   // <Provider store={store}>
-  <App />,
+
   // </Provider>,
 );

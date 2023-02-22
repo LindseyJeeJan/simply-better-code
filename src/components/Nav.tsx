@@ -1,6 +1,7 @@
 import React from 'react';
 import { Anchor, Nav } from 'grommet';
 import uuid from 'react-uuid';
+import { Link } from 'react-router-dom';
 
 const navLocations = [
   {
@@ -14,7 +15,9 @@ const navLocations = [
 ];
 
 const navItems = navLocations.map((link) => (
-  <Anchor color={'light'} key={uuid()} href={link.href} className='nav-link' label={link.label} />
+  <Link color={'light'} key={uuid()} to={link.href} className='nav-link'>
+    {link.label}
+  </Link>
 ));
 
 export default function NavBar() {
