@@ -1,6 +1,6 @@
 import React from 'react';
-import { Anchor, Nav } from 'grommet';
 import uuid from 'react-uuid';
+import { Nav } from 'grommet';
 import { Link } from 'react-router-dom';
 
 const navLocations = [

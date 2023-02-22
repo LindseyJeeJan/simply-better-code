@@ -7,14 +7,18 @@ export default function ErrorPage() {
   console.error(error);
 
   return (
-    <Box id='error-page' justify='center'>
-      <Heading level={1}>
-        <Text size='string'>Oops!</Text>
-      </Heading>
-      <Paragraph fill={true}>Sorry, an unexpected error has occurred.</Paragraph>
-      <Paragraph fill={true}>
-        <Text size='string'>{error?.statusText || error?.message}</Text>
-      </Paragraph>
+    <Box className='app-main'>
+      <main>
+        <Box id='error-page' justify='center'>
+          <Heading level={1}>
+            <Text size='string'>Oops!</Text>
+          </Heading>
+          <Paragraph fill={true}>Sorry, an unexpected error has occurred.</Paragraph>
+          <Paragraph fill={true}>
+            <Text size='string'>{error?.statusText || error?.message}</Text>
+          </Paragraph>
+        </Box>
+      </main>
     </Box>
   );
 }
