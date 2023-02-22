@@ -1,7 +1,7 @@
 import React from 'react';
 import uuid from 'react-uuid';
 import { Nav } from 'grommet';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const navLocations = [
   {
@@ -15,9 +15,14 @@ const navLocations = [
 ];
 
 const navItems = navLocations.map((link) => (
-  <Link color={'light'} key={uuid()} to={link.href} className='nav-link'>
+  <NavLink
+    color={'light'}
+    key={uuid()}
+    to={link.href}
+    className={({ isActive, isPending }) => (isActive ? 'active' : isPending ? 'pending' : '')}
+  >
     {link.label}
-  </Link>
+  </NavLink>
 ));
 
 export default function NavBar() {

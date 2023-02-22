@@ -1,6 +1,7 @@
 import React from 'react';
-import { Box, Heading, Page, Paragraph, Text } from 'grommet';
+import { Box, Heading, Page, Text } from 'grommet';
 import Tutorials from './Tutorials';
+import { Outlet } from 'react-router-dom';
 
 export default function TutorialForms() {
   const tutorialName: string = Tutorials[0].title;
@@ -11,7 +12,7 @@ export default function TutorialForms() {
         <Text size='string'>{tutorialName}</Text>
       </Heading>
       <Box pad={'large'}>
-        <Paragraph fill={true}>Text here</Paragraph>
+        <Outlet />
       </Box>
     </Page>
   );

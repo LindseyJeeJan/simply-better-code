@@ -7,6 +7,7 @@ import App from 'components/App';
 import About from 'components/pages/About';
 import Home from 'components/pages/Home';
 import Error from 'components/pages/Error';
+import TutorialForms from 'components/pages/tutorials/TutorialForms';
 
 // import store from 'store/store';
 
@@ -17,12 +18,16 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        path: '/',
+        path: '',
         element: <Home />,
       },
       {
-        path: '/about',
+        path: 'about',
         element: <About />,
+      },
+      {
+        path: 'tutorials/:href',
+        element: <TutorialForms />,
       },
     ],
   },

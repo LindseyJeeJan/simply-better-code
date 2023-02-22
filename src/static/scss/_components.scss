@@ -6,6 +6,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 50%;
+
   img {
     display: inline;
     margin: 0 auto;
@@ -26,7 +27,7 @@
     }
 
     .nav-list__link {
-      display: block;
+      display: flex;
       padding: 1rem;
 
       &:hover {
@@ -34,10 +35,12 @@
       }
 
       svg {
+        margin-right: 10px;
         path {
           stroke: $link-color;
         }
       }
+
       &:focus-visible {
         background-color: #eee2f0;
       }
@@ -49,5 +52,9 @@
   a {
     border-radius: $border-radius-base;
     padding: 7px;
+    &.active {
+      color: $dark-color;
+      text-decoration: none;
+    }
   }
 }
