@@ -1,16 +1,16 @@
 @import '/src/static/scss/variables';
 
 .image-cropper {
-  width: 250px;
-  height: 250px;
-  position: relative;
-  overflow: hidden;
   border-radius: 50%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  width: 250px;
 
   img {
     display: inline;
-    margin: 0 auto;
     height: 100%;
+    margin: 0 auto;
     width: auto;
   }
 }
@@ -22,11 +22,12 @@
   .nav-list__item {
     &::after {
       content: '';
-      display: block;
       border-bottom: 1px solid #ddd;
+      display: block;
     }
 
     .nav-list__link {
+      align-items: center;
       display: flex;
       padding: 1rem;
 
@@ -36,6 +37,7 @@
 
       svg {
         margin-right: 10px;
+
         path {
           stroke: $link-color;
         }
@@ -52,6 +54,7 @@
   a {
     border-radius: $border-radius-base;
     padding: 7px;
+
     &.active {
       color: $dark-color;
       text-decoration: none;
