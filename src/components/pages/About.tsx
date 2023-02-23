@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box, Heading, Image, Page, Paragraph, Text } from 'grommet';
 
 export default function About() {
+  (function SetTitle() {
+    useEffect(() => {
+      const title = 'About – ';
+      document.title = title.concat(document.title);
+    }, []);
+  })();
+
   return (
     <Page kind='full' fill='horizontal' pad='medium' align='center'>
       <Heading level={1}>

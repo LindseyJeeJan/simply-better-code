@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box, Heading, Page, Text, Paragraph } from 'grommet';
 import Tutorials from './Tutorials';
 import { Outlet } from 'react-router-dom';
 
 export default function TutorialForms() {
   const tutorialName: string = Tutorials[0].title;
+
+  (function SetTitle() {
+    useEffect(() => {
+      document.title = tutorialName;
+    }, []);
+  })();
 
   return (
     <Page kind='wide' fill='horizontal' pad='large'>
