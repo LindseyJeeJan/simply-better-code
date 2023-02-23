@@ -13,7 +13,7 @@ export default function Home() {
           &hellip;because accessible code doesn&apos;t have to be complicated
         </Paragraph>
       </Box>
-      <Box pad={'xlarge'} fill='horizontal'>
+      <Box pad={'large'} fill='horizontal'>
         <Heading level={2}>
           <Text size='string'>tutorials</Text>
         </Heading>

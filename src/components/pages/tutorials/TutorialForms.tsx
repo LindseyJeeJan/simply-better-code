@@ -8,7 +8,7 @@ export default function TutorialForms() {
 
   return (
     <Page kind='wide' fill='horizontal' pad='large'>
-      <Heading level={1}>
+      <Heading level={1} className='tutorial-heading'>
         <Text size='string'>{tutorialName}</Text>
       </Heading>
       <Box pad={'large'}>
