@@ -8,6 +8,7 @@ import About from 'components/pages/About';
 import Home from 'components/pages/Home';
 import Error from 'components/pages/Error';
 import TutorialForms from 'components/pages/tutorials/TutorialForms';
+import TutorialTodoList from 'components/pages/tutorials/TutorialTodoList';
 
 // import store from 'store/store';
 
@@ -26,8 +27,12 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: 'tutorials/:href',
+        path: 'tutorials/tutorial-forms',
         element: <TutorialForms />,
+      },
+      {
+        path: 'tutorials/tutorial-todo-list',
+        element: <TutorialTodoList />,
       },
     ],
   },

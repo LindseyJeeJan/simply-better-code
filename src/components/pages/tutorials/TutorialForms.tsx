@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, Page, Text } from 'grommet';
+import { Box, Heading, Page, Text, Paragraph } from 'grommet';
 import Tutorials from './Tutorials';
 import { Outlet } from 'react-router-dom';
 
@@ -12,7 +12,7 @@ export default function TutorialForms() {
         <Text size='string'>{tutorialName}</Text>
       </Heading>
       <Box pad={'large'}>
-        <Outlet />
+        <Paragraph fill={true}>Text here</Paragraph>
       </Box>
     </Page>
   );
