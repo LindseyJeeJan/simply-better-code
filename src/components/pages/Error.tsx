@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useRouteError } from 'react-router-dom';
+import { Link, useRouteError } from 'react-router-dom';
 import { Box, Heading, Paragraph, Text } from 'grommet';
 
 export default function ErrorPage() {
@@ -20,10 +20,11 @@ export default function ErrorPage() {
           <Heading level={1}>
             <Text size='string'>Error</Text>
           </Heading>
-          <Paragraph fill={true}>Sorry, an unexpected error has occurred.</Paragraph>
+          <Paragraph fill={true}>We&apos;re sorry, an unexpected error has occurred.</Paragraph>
           <Paragraph fill={true}>
             <Text size='string'>{error?.statusText || error?.message}</Text>
           </Paragraph>
+          <Link to='/'>Return to Home page</Link>
         </Box>
       </main>
     </Box>
