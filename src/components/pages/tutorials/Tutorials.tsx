@@ -1,11 +1,11 @@
 const Tutorials = [
   {
     href: 'tutorials/tutorial-forms',
-    title: 'Building accessible forms using React',
+    title: 'Build accessible forms with React',
   },
   {
     href: 'tutorials/tutorial-todo-list',
-    title: 'Building an accessible todo list using React',
+    title: 'Build an accessible todo list with React',
   },
 ];
 
