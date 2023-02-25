@@ -23,3 +23,55 @@ textarea {
 a:focus-visible {
   background-color: #eee2f0;
 }
+
+.input-group {
+  margin: 10px 0 20px 0;
+
+  label {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+input {
+  &[type='text'],
+  &[type='password'] {
+    border: 1px solid $gray-color;
+    border-radius: $border-radius-base;
+    padding: 10px;
+    width: 100%;
+
+    & .form-error {
+      border: 1px solid $error-color;
+    }
+  }
+}
+
+.message {
+  &-info {
+    color: $dark-color;
+  }
+  &-error {
+    color: $error-color;
+  }
+
+  &-info,
+  &-error {
+    display: flex;
+    align-items: center;
+
+    svg {
+      vertical-align: baseline;
+      width: 18px;
+      height: 18px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.outlined-thing {
+  border: 1px solid $gray-color-light;
+  padding: 30px;
+  border-radius: $border-radius-base;
+  background-color: white;
+}
