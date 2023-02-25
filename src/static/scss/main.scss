@@ -12,6 +12,14 @@ main {
   justify-content: center;
 }
 
+header {
+  border-bottom: 1px solid $gray-color-light;
+}
+
+footer {
+  border-top: 1px solid $gray-color-light;
+}
+
 a,
 button,
 input,

@@ -14,10 +14,12 @@ export default function Home() {
         </Paragraph>
       </Box>
       <Box pad={'large'} fill='horizontal'>
-        <Heading level={2}>
+        <Heading id='tutorial-heading' level={2}>
           <Text size='string'>tutorials</Text>
         </Heading>
-        <ListNav />
+        <section aria-labelledby='tutorial-heading'>
+          <ListNav />
+        </section>
       </Box>
     </Page>
   );
