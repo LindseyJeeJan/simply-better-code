@@ -57,15 +57,3 @@
     }
   }
 }
-
-.main-nav {
-  a {
-    border-radius: $border-radius-base;
-    padding: 7px;
-
-    &.active {
-      color: $dark-color;
-      text-decoration: none;
-    }
-  }
-}

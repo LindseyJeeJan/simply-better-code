@@ -11,6 +11,8 @@ a,
 button,
 input,
 textarea {
+  cursor: pointer;
+
   &:focus {
     box-shadow: none;
     outline: none;
@@ -20,8 +22,14 @@ textarea {
   }
 }
 
-a:focus-visible {
-  background-color: #eee2f0;
+a {
+  color: $focus-color !important;
+  font-weight: normal !important;
+  text-decoration: underline !important;
+
+  &:focus-visible {
+    background-color: #eee2f0;
+  }
 }
 
 .input-group {

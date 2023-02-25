@@ -6,11 +6,11 @@ import { NavLink } from 'react-router-dom';
 const navLocations = [
   {
     href: '/',
-    label: 'home',
+    label: 'Home',
   },
   {
     href: '/about',
-    label: 'about',
+    label: 'About',
   },
 ];
 
@@ -32,7 +32,7 @@ export default function MainNav() {
       className='main-nav'
       aria-label='main navigation'
       direction='row'
-      gap='small'
+      gap='medium'
       align='center'
     >
       {navItems}

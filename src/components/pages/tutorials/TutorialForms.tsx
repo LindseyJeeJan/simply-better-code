@@ -50,8 +50,8 @@ export default function TutorialForms() {
             <legend>User Login</legend>
             <div className='input-group'>
               <label htmlFor='username'>Username</label>
-              <p className='message-error'>
-                <Alert color='#CC0000' size='medium' />
+              <p className='message-error' role='alert'>
+                <Alert color='#CC0000' size='medium' aria-hidden='true' />
                 Required information. Enter your username.
               </p>
               <input
@@ -65,12 +65,12 @@ export default function TutorialForms() {
             <div className='input-group'>
               <label htmlFor='password'>Password</label>
               <p className='message-info'>
-                <CircleInformation color='cornflowerblue' size='medium' />
+                <CircleInformation color='cornflowerblue' size='medium' aria-hidden='true' />
                 Password must be 8 characters.
               </p>
 
-              <p className='message-error'>
-                <Alert color='#CC0000' size='medium' />
+              <p className='message-error' role='alert'>
+                <Alert color='#CC0000' size='medium' aria-hidden='true' />
                 Required information. Enter your password.
               </p>
               <input
@@ -90,7 +90,7 @@ export default function TutorialForms() {
         </div>
         <div className='outlined-thing padded-thing-small'>
           <h2>
-            <Accessibility color='black' size='medium' />
+            <Accessibility color='black' size='medium' aria-hidden='true' />
             Resources
           </h2>
           <Anchor href='https://www.w3.org/WAI/tutorials/forms/'>
