@@ -16,7 +16,7 @@ export default function TutorialTodoList() {
       <Heading level={1} className='tutorial-heading'>
         <Text size='string'>{tutorialName}</Text>
       </Heading>
-      <Box pad={'large'}>
+      <Box pad={'small'}>
         <Paragraph fill={true}>Text here</Paragraph>
       </Box>
     </Page>

@@ -9,16 +9,16 @@ export default function Container() {
   return (
     <>
       <Box className='app-main'>
-        <Header pad='medium' align='center' justify='between'>
+        <Header pad='small' align='center' justify='between'>
           <Avatar src={gravatarSrc} />
           <NavBar />
         </Header>
         <main>
           <Outlet />
         </main>
-        <Footer pad='medium' align='center' justify='end'>
+        <Footer pad='small' align='center' justify='end'>
           <Text size='small' className='copyright'>
-            copyright &copy;2023
+            Copyright &copy;2023 Lindsey Lauria.
           </Text>
         </Footer>
       </Box>

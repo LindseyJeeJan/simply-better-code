@@ -37,8 +37,6 @@ a,
 }
 
 p {
-  font-size: $font-size-base;
-  line-height: 120%;
   margin-bottom: 1rem;
 }
 
@@ -48,12 +46,32 @@ svg.link {
   }
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .copyright {
   color: $gray-color;
 }
 
+.italics {
+  font-style: italic;
+  font-style: oblique;
+}
+
 .nav__link {
   text-transform: lowercase;
+}
+
+.paragraph__no-margin {
+  margin-bottom: 0;
+}
+
+.styled-list {
+  li {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
 }
 
 .uppercase {

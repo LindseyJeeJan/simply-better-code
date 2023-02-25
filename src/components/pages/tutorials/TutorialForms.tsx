@@ -26,8 +26,24 @@ export default function TutorialForms() {
       <Heading level={1} className='tutorial-heading'>
         <Text size='string'>{tutorialName}</Text>
       </Heading>
-      <Box pad={'large'}>
-        <Paragraph fill={true}>Text here</Paragraph>
+      <Box pad={'small'}>
+        <Paragraph fill={true}>
+          To build an accessible form, first and foremost it&apos;s important to consider that users
+          typically prefer simple and short forms. Overly complicated or non-intuitive forms can
+          lead to cognitive fatigue or frustration and can lead to users abandoning the task. As a
+          developer trying to gather user information, this means we have already failed our task.
+        </Paragraph>
+        <Paragraph fill={true} className='paragraph__no-margin'>
+          Even basic forms have some things to consider through the lens of acccessiblity:
+        </Paragraph>
+        <Text margin='small'>
+          <ul className='styled-list'>
+            <li>grouping</li>
+            <li>instructions</li>
+            <li>labels</li>
+            <li>validation</li>
+          </ul>
+        </Text>
         <div className='code-box'>
           <SyntaxHighlighter language='javascript' style={a11yDark}>
             {codeString}

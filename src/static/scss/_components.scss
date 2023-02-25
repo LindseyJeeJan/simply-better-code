@@ -1,6 +1,8 @@
 @import '/src/static/scss/variables';
 
 .code-box {
+  margin: 10px 0;
+
   pre {
     border-radius: 3px;
   }
@@ -8,10 +10,10 @@
 
 .image-cropper {
   border-radius: 50%;
-  height: 250px;
+  height: 230px;
   overflow: hidden;
   position: relative;
-  width: 250px;
+  width: 230px;
 
   img {
     display: inline;

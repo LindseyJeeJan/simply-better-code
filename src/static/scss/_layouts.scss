@@ -26,3 +26,11 @@
 .left-margin-auto {
   margin-left: auto;
 }
+
+.center-mobile {
+  @include phone-breakpoint {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}

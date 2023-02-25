@@ -32,7 +32,7 @@ export default function NavBar() {
       className='main-nav'
       aria-label='main navigation'
       direction='row'
-      gap='medium'
+      gap='small'
       align='center'
     >
       {navItems}
