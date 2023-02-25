@@ -1,5 +1,11 @@
 @import '/src/static/scss/variables';
 
+.code-box {
+  pre {
+    border-radius: 3px;
+  }
+}
+
 .image-cropper {
   border-radius: 50%;
   height: 250px;

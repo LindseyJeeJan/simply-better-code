@@ -10,14 +10,8 @@ body {
 
 code,
 .code {
-  font-family: 'Courier New', monospace, source-code-pro, Menlo, Monaco, Consolas;
-}
-
-.code,
-.code span,
-.code span code,
-.function-variable {
-  font-weight: bold;
+  font-family: Consolas, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono',
+    'Bitstream Vera Sans Mono', 'Courier New';
 }
 
 h1,
