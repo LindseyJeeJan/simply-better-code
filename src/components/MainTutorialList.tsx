@@ -3,7 +3,7 @@ import uuid from 'react-uuid';
 import { Link } from 'react-router-dom';
 import { Nav } from 'grommet';
 import { Book } from 'grommet-icons';
-import Tutorials from './pages/tutorials/Tutorials';
+import Tutorials from './pages/tutorials/TutorialsData';
 
 interface Tutorial {
   href: string;
@@ -19,7 +19,7 @@ const tutorialItems = Tutorials.map((tutorial: Tutorial) => (
   </li>
 ));
 
-export default function NavLayout() {
+export default function MainTutorialList() {
   return (
     <Nav align='start' direction='row' gap='medium' justify='start'>
       <ul className='nav-list'>{tutorialItems}</ul>

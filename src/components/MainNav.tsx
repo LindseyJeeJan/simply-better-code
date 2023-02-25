@@ -26,7 +26,7 @@ const navItems = navLocations.map((link) => (
   </NavLink>
 ));
 
-export default function NavBar() {
+export default function MainNav() {
   return (
     <Nav
       className='main-nav'

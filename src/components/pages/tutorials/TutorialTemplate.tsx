@@ -3,7 +3,7 @@ import { Box, Heading, Page, Text } from 'grommet';
 
 import { Outlet } from 'react-router-dom';
 
-export default function Tutorial() {
+export default function TutorialTemplate() {
   return (
     <Page kind='wide' fill='horizontal' pad='large'>
       <Heading level={1}>

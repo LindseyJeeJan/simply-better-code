@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { Box, Heading, Page, Text, Paragraph } from 'grommet';
-import Tutorials from './Tutorials';
-import { Alert, CircleInformation } from 'grommet-icons';
+import { Anchor, Box, Heading, Page, Text, Paragraph } from 'grommet';
+import { Accessibility, Alert, CircleInformation } from 'grommet-icons';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import js from 'react-syntax-highlighter/dist/esm/languages/hljs/javascript';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import Tutorials from './TutorialsData';
 
 export default function TutorialForms() {
   const tutorialName: string = Tutorials[0].title;
@@ -45,7 +45,7 @@ export default function TutorialForms() {
             <li>validation</li>
           </ul>
         </Text>
-        <form className='outlined-thing'>
+        <form className='outlined-thing background-white padded-thing-large'>
           <fieldset>
             <legend>User Login</legend>
             <div className='input-group'>
@@ -87,6 +87,15 @@ export default function TutorialForms() {
           <SyntaxHighlighter language='javascript' style={a11yDark}>
             {codeString}
           </SyntaxHighlighter>
+        </div>
+        <div className='outlined-thing padded-thing-small'>
+          <h2>
+            <Accessibility color='black' size='medium' />
+            Resources
+          </h2>
+          <Anchor href='https://www.w3.org/WAI/tutorials/forms/'>
+            W3C Web Accessibility Initiative Forms Tutorial
+          </Anchor>
         </div>
       </Box>
     </Page>

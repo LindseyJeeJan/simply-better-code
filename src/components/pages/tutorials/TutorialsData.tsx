@@ -1,4 +1,4 @@
-const Tutorials = [
+const TutorialsData = [
   {
     href: 'tutorials/tutorial-forms',
     title: 'Build accessible forms with React',
@@ -9,4 +9,4 @@ const Tutorials = [
   },
 ];
 
-export default Tutorials;
+export default TutorialsData;

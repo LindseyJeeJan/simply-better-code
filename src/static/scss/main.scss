@@ -69,9 +69,22 @@ input {
   }
 }
 
+.background-white {
+  background-color: white;
+}
+
 .outlined-thing {
   border: 1px solid $gray-color-light;
-  padding: 30px;
   border-radius: $border-radius-base;
-  background-color: white;
+}
+
+.padded-thing {
+  padding: 20px;
+
+  &-large {
+    padding: 30px;
+  }
+  &-small {
+    padding: 15px;
+  }
 }
