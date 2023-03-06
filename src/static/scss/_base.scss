@@ -2,7 +2,7 @@
 @import 'variables';
 
 body {
-  background-color: whitesmoke;
+  background-color: $off-white-color;
   margin: 0;
 }
 
@@ -23,7 +23,7 @@ footer {
   border-top: 1px solid $gray-color-light;
   font-size: 80%;
   a {
-    margin-right: 15px;
+    margin: 0 15px;
   }
 }
 

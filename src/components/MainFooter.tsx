@@ -21,7 +21,7 @@ export default function MainFooter() {
           </Anchor>
         </div>
         <Text size='small' className='copyright'>
-          Made by Lindsey Lauria &copy;2023
+          Copyright Lindsey Lauria &copy;2023
         </Text>
       </Footer>
     </>

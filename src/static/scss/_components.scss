@@ -30,7 +30,7 @@
   .nav-list__item {
     &::after {
       content: '';
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid $gray-color-light;
       display: block;
     }
 
@@ -40,7 +40,7 @@
       padding: 1rem;
 
       &:hover {
-        background-color: #e2ebf0;
+        background-color: $gray-color-light;
       }
 
       svg {

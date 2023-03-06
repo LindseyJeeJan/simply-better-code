@@ -1,5 +1,5 @@
 import React from 'react';
-import { Anchor, Box, Footer, Text } from 'grommet';
+import { Box } from 'grommet';
 import MainHeader from 'components/MainHeader';
 import MainFooter from 'components/MainFooter';
 import { Outlet } from 'react-router-dom';

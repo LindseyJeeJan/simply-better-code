@@ -11,8 +11,6 @@ a,
 button,
 input,
 textarea {
-  cursor: pointer;
-
   &:focus {
     box-shadow: none;
     outline: none;
@@ -24,6 +22,7 @@ textarea {
 
 a {
   color: $focus-color !important;
+  cursor: pointer;
   font-weight: normal !important;
   text-decoration: underline !important;
 

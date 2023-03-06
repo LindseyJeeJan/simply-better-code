@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Anchor, Box, Heading, Page, Text, Paragraph } from 'grommet';
+import React, { useState, useEffect, FormEvent } from 'react';
+import { Anchor, Box, Button, Heading, Page, Text, Paragraph } from 'grommet';
 import { Accessibility, Alert, CircleInformation } from 'grommet-icons';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import js from 'react-syntax-highlighter/dist/esm/languages/hljs/javascript';
@@ -7,19 +7,57 @@ import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Tutorials from './TutorialsData';
 
 export default function TutorialForms() {
-  const tutorialName: string = Tutorials[0].title;
-
   (function SetTitle() {
     useEffect(() => {
       document.title = tutorialName;
     }, []);
   })();
 
+  const tutorialName: string = Tutorials[0].title;
   SyntaxHighlighter.registerLanguage('javascript', js);
-
   const codeString = `<Heading level={1} className='tutorial-heading'>
       <Text size='string'>{tutorialName}</Text>
   </Heading>`;
+
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorUsernameRequired, setErrorUsernameRequired] = useState('');
+  const [errorPasswordRequired, setErrorPasswordRequired] = useState('');
+
+  const resetErrorMessages = () => {
+    setErrorUsernameRequired('');
+    setErrorPasswordRequired('');
+  };
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const name: string = (event.target as HTMLInputElement).name;
+    const value: string = (event.target as HTMLInputElement).value;
+    if (name === 'username') {
+      setUsername(value);
+    } else if (name === 'password') {
+      setPassword(value);
+    }
+  };
+
+  const handleFormSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    resetErrorMessages();
+
+    if (!username.length || !password.length) {
+      if (!username.length) {
+        setErrorUsernameRequired(`Error: Required information. Enter your username.`);
+      }
+      if (!password.length) {
+        setErrorPasswordRequired('Error: Required information. Enter your password.');
+      }
+      return;
+    }
+
+    alert(`Login was successful.`);
+    setUsername('');
+    setPassword('');
+    resetErrorMessages();
+  };
 
   return (
     <Page kind='wide' fill='horizontal' pad='large'>
@@ -30,36 +68,47 @@ export default function TutorialForms() {
         <Paragraph fill={true}>
           To build an accessible form, it&apos;s important to consider that users typically prefer
           simple and short forms. Overly complicated or non-intuitive forms can lead to cognitive
-          fatigue or frustration and can lead to users abandoning the task. As a developer trying to
-          gather user information, this means we have already failed our task.
+          fatigue or frustration which can lead to users abandoning the task. As a developer whose
+          job is to gather user information, this means we have failed our goal.
         </Paragraph>
 
         <Paragraph fill={true} className='paragraph__no-margin'>
-          Even basic forms have some things to consider through the lens of acccessiblity:
+          Even basic forms have things to consider through the lens of acccessiblity:
         </Paragraph>
         <Text margin='small'>
           <ul className='styled-list'>
-            <li>grouping</li>
+            <li>grouping of controls</li>
             <li>instructions</li>
             <li>labels</li>
             <li>validation</li>
           </ul>
         </Text>
-        <form className='outlined-thing background-white padded-thing-large'>
+        <Paragraph fill={true}>
+          Here is an example of a simple username and password entry form.
+        </Paragraph>
+        <form
+          className='outlined-thing background-white padded-thing-large'
+          noValidate
+          onSubmit={handleFormSubmit}
+        >
           <fieldset>
             <legend>User Login</legend>
             <div className='input-group'>
               <label htmlFor='username'>Username</label>
-              <p className='message-error' role='alert'>
+              <p className='message-error' id='errorUsernameRequired' role='alert'>
                 <Alert color='#CC0000' size='medium' aria-hidden='true' />
-                Required information. Enter your username.
+                {errorUsernameRequired}
               </p>
               <input
-                id='username'
-                className='form-error'
-                type='text'
-                placeholder='your username'
+                aria-describedby='errorUsernameRequired'
                 autoComplete='off'
+                className='form-error'
+                id='username'
+                name='username'
+                onChange={(e) => handleInputChange(e)}
+                placeholder='your username'
+                required
+                type='text'
               />
             </div>
             <div className='input-group'>
@@ -69,18 +118,23 @@ export default function TutorialForms() {
                 Password must be 8 characters.
               </p>
 
-              <p className='message-error' role='alert'>
+              <p id='errorPasswordRequired' className='message-error' role='alert'>
                 <Alert color='#CC0000' size='medium' aria-hidden='true' />
-                Required information. Enter your password.
+                {errorPasswordRequired}
               </p>
               <input
-                id='password'
-                className='form-error'
-                type='password'
-                placeholder='your password'
+                aria-describedby='errorPasswordRequired'
                 autoComplete='off'
+                className='form-error'
+                id='password'
+                onChange={handleInputChange}
+                name='password'
+                placeholder='your password'
+                required
+                type='password'
               />
             </div>
+            <Button type='submit' primary label='Submit' />
           </fieldset>
         </form>
         <div className='code-box'>
@@ -89,11 +143,11 @@ export default function TutorialForms() {
           </SyntaxHighlighter>
         </div>
         <div className='outlined-thing padded-thing-small'>
-          <h2>
-            <Accessibility color='black' size='medium' aria-hidden='true' />
+          <h2 className='bold'>
+            <Accessibility color='gray' size='medium' aria-hidden='true' />
             Resources
           </h2>
-          <Anchor href='https://www.w3.org/WAI/tutorials/forms/'>
+          <Anchor href='https://www.w3.org/WAI/tutorials/forms/' target={'_blank'}>
             W3C Web Accessibility Initiative Forms Tutorial
           </Anchor>
         </div>
