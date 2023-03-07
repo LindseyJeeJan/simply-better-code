@@ -1,10 +1,11 @@
 import React, { useState, useEffect, FormEvent } from 'react';
 import { Anchor, Box, Button, Heading, Page, Text, Paragraph } from 'grommet';
-import { Accessibility, Alert, CircleInformation } from 'grommet-icons';
+import { Accessibility } from 'grommet-icons';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import js from 'react-syntax-highlighter/dist/esm/languages/hljs/javascript';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Tutorials from './TutorialsData';
+import AlertMessage from './../../Alerts';
 
 export default function TutorialForms() {
   (function SetTitle() {
@@ -95,10 +96,11 @@ export default function TutorialForms() {
             <legend>User Login</legend>
             <div className='input-group'>
               <label htmlFor='username'>Username</label>
-              <p className='message-error' id='errorUsernameRequired' role='alert'>
-                <Alert color='#CC0000' size='medium' aria-hidden='true' />
-                {errorUsernameRequired}
-              </p>
+              <AlertMessage
+                alertType='error'
+                id='errorUsernameRequired'
+                message={errorUsernameRequired}
+              />
               <input
                 aria-describedby='errorUsernameRequired'
                 autoComplete='off'
@@ -113,15 +115,16 @@ export default function TutorialForms() {
             </div>
             <div className='input-group'>
               <label htmlFor='password'>Password</label>
-              <p className='message-info'>
-                <CircleInformation color='cornflowerblue' size='medium' aria-hidden='true' />
-                Password must be 8 characters.
-              </p>
-
-              <p id='errorPasswordRequired' className='message-error' role='alert'>
-                <Alert color='#CC0000' size='medium' aria-hidden='true' />
-                {errorPasswordRequired}
-              </p>
+              <AlertMessage
+                id='passwordInformation'
+                message='Password must be 8 characters.'
+                alertType='information'
+              />
+              <AlertMessage
+                alertType='error'
+                id='errorPasswordRequired'
+                message={errorPasswordRequired}
+              />
               <input
                 aria-describedby='errorPasswordRequired'
                 autoComplete='off'
