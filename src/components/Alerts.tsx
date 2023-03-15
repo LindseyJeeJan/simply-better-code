@@ -1,4 +1,4 @@
-import React, { JSXElementConstructor, ReactElement, ReactFragment } from 'react';
+import React from 'react';
 import { Alert, CircleInformation } from 'grommet-icons';
 
 export interface Props {
@@ -10,9 +10,10 @@ export interface Props {
 export default function AlertMessage({ message, id = '', alertType = 'error' }: Props) {
   return (
     <p
-      className={'alert-message' + alertType === 'error' ? 'message-error' : ''}
+      className={alertType === 'error' ? 'alert-message message-error' : 'alert-message '}
       id={id}
-      role='alert'
+      role={alertType === 'error' ? 'alert' : ''}
+      style={{ display: message ? 'block' : 'none' }}
     >
       {alertType == 'error' ? (
         <Alert color='#CC0000' size='medium' aria-hidden='true' />
