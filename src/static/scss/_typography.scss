@@ -80,7 +80,8 @@ legend {
 .styled-list {
   li {
     list-style-type: disc;
-    margin-left: 20px;
+    margin-left: $large;
+    margin-bottom: $small;
   }
 }
 

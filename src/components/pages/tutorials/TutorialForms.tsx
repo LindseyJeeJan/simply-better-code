@@ -1,9 +1,8 @@
 import React, { useState, useEffect, FormEvent } from 'react';
 import { Anchor, Box, Button, Heading, Page, Text, Paragraph } from 'grommet';
 import { Accessibility } from 'grommet-icons';
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
-import js from 'react-syntax-highlighter/dist/esm/languages/hljs/javascript';
-import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import Tutorials from './TutorialsData';
 import AlertMessage from './../../Alerts';
 
@@ -15,10 +14,55 @@ export default function TutorialForms() {
   })();
 
   const tutorialName: string = Tutorials[0].title;
-  SyntaxHighlighter.registerLanguage('javascript', js);
-  const codeString = `<Heading level={1} className='tutorial-heading'>
-      <Text size='string'>{tutorialName}</Text>
-  </Heading>`;
+  const codeString = `
+<fieldset>
+  <legend>User Login</legend>
+  <div className='input-group'>
+    <label>
+      <div className='margin-bottom-small'>Username</div>
+      <AlertMessage alertType='error' id='errorUsername' message={errorUsername} />
+      <input
+      aria-describedby='errorUsername'
+      aria-invalid={errorUsername ? 'true' : false}
+      autoComplete='off'
+      className={errorUsername ? 'form-error' : ''}
+      name='username'
+      onChange={(e) => handleInputChange(e)}
+      placeholder='your username'
+      required
+      type='text'
+      value={username}
+      />
+    </label>
+  </div>
+  <div className='input-group'>
+    <label>
+      <div className='margin-bottom-small'>Password</div>
+      <AlertMessage
+      id='passwordInformation'
+      message='Password is at least 8 characters.'
+      alertType='information'
+      />
+      <AlertMessage alertType='error' id='errorPassword' message={errorPassword} />
+      <input
+      aria-describedby='errorPassword'
+      aria-invalid={errorPassword ? 'true' : false}
+      autoComplete='off'
+      className={errorPassword ? 'form-error' : ''}
+      onChange={(e) => handleInputChange(e)}
+      minLength={8}
+      name='password'
+      placeholder='your password'
+      required
+      type='password'
+      value={password}
+      />
+    </label>
+  </div>
+  <Button type='submit' primary label='Submit' />
+</fieldset>
+
+`;
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -56,6 +100,9 @@ export default function TutorialForms() {
       if (!password.length) {
         setErrorPassword('Error: Required information. Enter your password.');
       }
+      if (password.length > 1 && password.length < 8) {
+        setErrorPassword('Error: Password must be at least 8 characters.');
+      }
       return;
     }
 
@@ -78,14 +125,28 @@ export default function TutorialForms() {
         </Paragraph>
 
         <Paragraph fill={true} className='paragraph__no-margin'>
-          Even basic forms have things to consider through the lens of acccessiblity:
+          All forms have some things to consider through the lens of acccessiblity:
         </Paragraph>
         <Text margin='small'>
           <ul className='styled-list'>
-            <li>grouping of controls</li>
-            <li>instructions</li>
-            <li>labels</li>
-            <li>validation</li>
+            <li>
+              <span className='bold'>Grouping of controls:</span> If a group exists, it is marked as
+              a group or grouped using a fielset element. The group has a label and instructions, if
+              needed.
+            </li>
+            <li>
+              <span className='bold'>Instructions:</span> Requirements and/or formats are provided.
+            </li>
+            <li>
+              <span className='bold'>Labels:</span> A concise and accesssible label is
+              programmatically linked to each form field.
+            </li>
+            <li>
+              <span className='bold'>Validation:</span> Errors are clearly marked and help is
+              provided to explain why an error has occurred as well as how to fix it. Error
+              messaging persists until errors are fixed. The messaging is close to the field that
+              needs help and is programmatically associated to the field.
+            </li>
           </ul>
         </Text>
         <Paragraph fill={true}>
@@ -121,7 +182,7 @@ export default function TutorialForms() {
                 <div className='margin-bottom-small'>Password</div>
                 <AlertMessage
                   id='passwordInformation'
-                  message='Password must be 8 characters.'
+                  message='Password is at least 8 characters.'
                   alertType='information'
                 />
                 <AlertMessage alertType='error' id='errorPassword' message={errorPassword} />
@@ -131,6 +192,7 @@ export default function TutorialForms() {
                   autoComplete='off'
                   className={errorPassword ? 'form-error' : ''}
                   onChange={(e) => handleInputChange(e)}
+                  minLength={8}
                   name='password'
                   placeholder='your password'
                   required
@@ -143,7 +205,7 @@ export default function TutorialForms() {
           </fieldset>
         </form>
         <div className='code-box'>
-          <SyntaxHighlighter language='javascript' style={a11yDark}>
+          <SyntaxHighlighter language='jsx' style={a11yDark}>
             {codeString}
           </SyntaxHighlighter>
         </div>
