@@ -2,6 +2,7 @@ import React from 'react';
 import uuid from 'react-uuid';
 import { Link } from 'react-router-dom';
 import { Nav } from 'grommet';
+import { Book } from 'grommet-icons';
 
 import Tutorials from './pages/tutorials/TutorialsData';
 
@@ -13,7 +14,7 @@ interface Tutorial {
 const tutorialItems = Tutorials.map((tutorial: Tutorial) => (
   <li className='nav-list__item' key={uuid()}>
     <Link className='nav-list__link' to={tutorial.href}>
-      {tutorial.title}
+      <Book color='plain' size='medium' /> {tutorial.title}
     </Link>
   </li>
 ));
