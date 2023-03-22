@@ -22,12 +22,17 @@ export default function TutorialForms() {
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [errorUsernameRequired, setErrorUsernameRequired] = useState('');
-  const [errorPasswordRequired, setErrorPasswordRequired] = useState('');
+  const [errorUsername, setErrorUsername] = useState('');
+  const [errorPassword, setErrorPassword] = useState('');
 
   const resetErrorMessages = () => {
-    setErrorUsernameRequired('');
-    setErrorPasswordRequired('');
+    setErrorUsername('');
+    setErrorPassword('');
+  };
+
+  const resetForm = () => {
+    setUsername('');
+    setPassword('');
   };
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -46,17 +51,16 @@ export default function TutorialForms() {
 
     if (!username.length || !password.length) {
       if (!username.length) {
-        setErrorUsernameRequired(`Error: Required information. Enter your username.`);
+        setErrorUsername(`Error: Required information. Enter your username.`);
       }
       if (!password.length) {
-        setErrorPasswordRequired('Error: Required information. Enter your password.');
+        setErrorPassword('Error: Required information. Enter your password.');
       }
       return;
     }
 
-    alert(`Login was successful.`);
-    setUsername('');
-    setPassword('');
+    confirm('Login was successful.');
+    resetForm();
     resetErrorMessages();
   };
 
@@ -95,47 +99,45 @@ export default function TutorialForms() {
           <fieldset>
             <legend>User Login</legend>
             <div className='input-group'>
-              <label htmlFor='username'>Username</label>
-              <AlertMessage
-                alertType='error'
-                id='errorUsernameRequired'
-                message={errorUsernameRequired}
-              />
-              <input
-                aria-describedby='errorUsernameRequired'
-                autoComplete='off'
-                className='form-error'
-                id='username'
-                name='username'
-                onChange={(e) => handleInputChange(e)}
-                placeholder='your username'
-                required
-                type='text'
-              />
+              <label>
+                <div className='margin-bottom-small'>Username</div>
+                <AlertMessage alertType='error' id='errorUsername' message={errorUsername} />
+                <input
+                  aria-describedby='errorUsername'
+                  aria-invalid={errorUsername ? 'true' : false}
+                  autoComplete='off'
+                  className={errorUsername ? 'form-error' : ''}
+                  name='username'
+                  onChange={(e) => handleInputChange(e)}
+                  placeholder='your username'
+                  required
+                  type='text'
+                  value={username}
+                />
+              </label>
             </div>
             <div className='input-group'>
-              <label htmlFor='password'>Password</label>
-              <AlertMessage
-                id='passwordInformation'
-                message='Password must be 8 characters.'
-                alertType='information'
-              />
-              <AlertMessage
-                alertType='error'
-                id='errorPasswordRequired'
-                message={errorPasswordRequired}
-              />
-              <input
-                aria-describedby='errorPasswordRequired'
-                autoComplete='off'
-                className='form-error'
-                id='password'
-                onChange={handleInputChange}
-                name='password'
-                placeholder='your password'
-                required
-                type='password'
-              />
+              <label>
+                <div className='margin-bottom-small'>Password</div>
+                <AlertMessage
+                  id='passwordInformation'
+                  message='Password must be 8 characters.'
+                  alertType='information'
+                />
+                <AlertMessage alertType='error' id='errorPassword' message={errorPassword} />
+                <input
+                  aria-describedby='errorPassword'
+                  aria-invalid={errorPassword ? 'true' : false}
+                  autoComplete='off'
+                  className={errorPassword ? 'form-error' : ''}
+                  onChange={(e) => handleInputChange(e)}
+                  name='password'
+                  placeholder='your password'
+                  required
+                  type='password'
+                  value={password}
+                />
+              </label>
             </div>
             <Button type='submit' primary label='Submit' />
           </fieldset>
