@@ -176,6 +176,32 @@ export default function TutorialForms() {
             {codeString}
           </SyntaxHighlighter>
         </div>
+        <Paragraph fill={true}>
+          By using semantic HTML elements and responsive web design principles, we increase the
+          likelihood that it will display properly on a wide range of devices, including mobile
+          devices with smaller screens. We also ensure support by assistive technologies.
+        </Paragraph>
+        <Paragraph fill={true}>
+          The form includes clear and descriptive labels for each input field, which can help users
+          understand what information is required in each field. Additionally, the use of a&nbsp;
+          <span className='code'>fieldset</span> element and a <span className='code'>legend</span>{' '}
+          tag to group related inputs can help users with screen readers navigate the form more
+          easily.
+        </Paragraph>
+        <Paragraph fill={true}>
+          Error messages are associated with each input field. This means that if a user enters
+          invalid information into a field, they will receive an error message that is directly
+          associated with that field, rather than a generic error message that does not provide
+          specific guidance.
+        </Paragraph>
+
+        <Paragraph fill={true}>
+          The use of the <span className='code'>noValidate</span> attribute in the form element
+          means that the form will not be validated by the browser itself. This can be beneficial
+          for users who may be using assistive technologies that do not work well with browser-based
+          validation, or for users who have disabled browser-based validation for personal
+          preference or security reasons.
+        </Paragraph>
         <div className='outlined-thing padded-thing-small'>
           <h2 className='bold'>
             <Accessibility color='gray' size='medium' aria-hidden='true' />
