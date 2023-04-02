@@ -17,7 +17,7 @@ export default function TutorialTodoList() {
         <Text size='string'>{tutorialName}</Text>
       </Heading>
       <Box pad={'small'}>
-        <Paragraph fill={true}>Text here</Paragraph>
+        <Paragraph fill={true}>Coming soon...</Paragraph>
       </Box>
     </Page>
   );
