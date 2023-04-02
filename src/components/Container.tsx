@@ -7,7 +7,7 @@ import { Outlet } from 'react-router-dom';
 export default function Container() {
   return (
     <>
-      <Box className='app-main'>
+      <Box height='100vh'>
         <MainHeader />
         <main>
           <Outlet />

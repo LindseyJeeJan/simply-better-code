@@ -10,6 +10,13 @@ html {
   box-sizing: border-box;
 }
 
+body,
+html,
+#root,
+.app-main {
+  height: 100%;
+}
+
 footer,
 header {
   flex-grow: 0;

@@ -6,7 +6,7 @@ export default function ErrorPage() {
   const error: any | unknown = useRouteError();
   console.error(error);
 
-  const errorTitle = 'Error – ';
+  const errorTitle = 'Error 404 Page Not Found – ';
   (function SetTitle() {
     useEffect(() => {
       document.title = errorTitle.concat(document.title);
@@ -14,18 +14,17 @@ export default function ErrorPage() {
   })();
 
   return (
-    <Box height='100vh'>
+    <Box className='app-main'>
       <main>
         <Box id='error-page' justify='center'>
           <Heading level={1}>
-            <Text size='string'>Error</Text>
+            <Text size='string'>404 Page Not Found</Text>
           </Heading>
-          <Paragraph fill={true}>We&apos;re sorry, an unexpected error has occurred.</Paragraph>
+          <Paragraph fill={true}>The page you&apos;re looking for does not exist.</Paragraph>
           <Paragraph fill={true}>
-            <Text size='string'>{error?.statusText || error?.message}</Text>
-          </Paragraph>
-          <Paragraph fill={true}>
-            Return to the <Link to='/'>homepage</Link>.
+            <Text size='string'>
+              Please check the URL and try again, or return to the <Link to='/'>homepage</Link>.
+            </Text>
           </Paragraph>
         </Box>
       </main>

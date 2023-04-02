@@ -5,7 +5,7 @@ import { Grommet } from 'grommet';
 
 export default function App() {
   return (
-    <Grommet>
+    <Grommet className='app-main'>
       <Container />
     </Grommet>
   );
