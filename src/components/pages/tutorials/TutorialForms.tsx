@@ -3,8 +3,8 @@ import { Anchor, Box, Button, Heading, Page, Text, Paragraph } from 'grommet';
 import { Accessibility } from 'grommet-icons';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import Tutorials from '@/components/pages/tutorials/TutorialsData';
-import Input from '@/components/Input';
+import Tutorials from './TutorialsData';
+import Input from '../../Input';
 
 export default function TutorialForms() {
   (function SetTitle() {

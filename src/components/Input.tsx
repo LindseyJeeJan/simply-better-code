@@ -1,5 +1,5 @@
 import React from 'react';
-import AlertMessage from '@/components/Alerts';
+import AlertMessage from './Alerts';
 
 export interface Props {
   name: string;

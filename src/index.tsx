@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 // import { Provider } from 'react-redux';
-import 'static/scss/main.scss';
-import App from 'components/App';
-import About from 'components/pages/About';
-import Home from 'components/pages/Home';
-import Error from 'components/pages/Error';
-import TutorialForms from 'components/pages/tutorials/TutorialForms';
-import TutorialTodoList from 'components/pages/tutorials/TutorialTodoList';
+import './static/scss/main.scss';
+import App from './components/App';
+import About from './components/pages/About';
+import Home from './components/pages/Home';
+import Error from './components/pages/Error';
+import TutorialForms from './components/pages/tutorials/TutorialForms';
+import TutorialTodoList from './components/pages/tutorials/TutorialTodoList';
 
 // import store from 'store/store';
 
