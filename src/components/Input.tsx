@@ -8,7 +8,7 @@ export interface Props {
   minLength?: number;
   error: boolean | undefined;
   errorMessage?: string | undefined;
-  value: string;
+  value?: string;
   onChange: any;
 }
 

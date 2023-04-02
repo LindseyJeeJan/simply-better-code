@@ -5,6 +5,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import Tutorials from './TutorialsData';
 import Input from '../../Input';
+import AlertMessage from '../../Alerts';
 
 export default function TutorialForms() {
   (function SetTitle() {
@@ -15,52 +16,36 @@ export default function TutorialForms() {
 
   const tutorialName: string = Tutorials[0].title;
   const codeString = `
-<fieldset>
-  <legend>User Login</legend>
-  <div className='input-group'>
-    <label>
-      <div className='margin-bottom-small'>Username</div>
-      <AlertMessage alertType='error' id='usernameValidationError' message={usernameValidationError} />
-      <input
-      aria-describedby='usernameValidationError'
-      aria-invalid={usernameValidationError ? 'true' : false}
-      autoComplete='off'
-      className={usernameValidationError ? 'form-error' : ''}
+<form className='outlined-thing background-white padded-thing-large' noValidate>
+  <fieldset>
+    <legend>User Login</legend>
+    <Input
       name='username'
-      onChange={(e) => handleInputChange(e)}
-      placeholder='your username'
-      required
+      label='Username'
       type='text'
+      minLength={0}
+      error={!!usernameValidationError}
+      errorMessage={usernameValidationError}
       value={username}
-      />
-    </label>
-  </div>
-  <div className='input-group'>
-    <label>
-      <div className='margin-bottom-small'>Password</div>
-      <AlertMessage
-      id='passwordInformation'
-      message='Password is at least 8 characters.'
+      onChange={handleInputChange}
+    />
+    <AlertMessage
       alertType='information'
-      />
-      <AlertMessage alertType='error' id='passwordValidationError' message={passwordValidationError} />
-      <input
-      aria-describedby='passwordValidationError'
-      aria-invalid={passwordValidationError ? 'true' : false}
-      autoComplete='off'
-      className={passwordValidationError ? 'form-error' : ''}
-      onChange={(e) => handleInputChange(e)}
-      minLength={8}
+      message='Password must be at least 8 characters.'
+    />
+    <Input
       name='password'
-      placeholder='your password'
-      required
+      label='Password'
       type='password'
+      minLength={8}
+      error={!!passwordValidationError}
+      errorMessage={passwordValidationError}
       value={password}
-      />
-    </label>
-  </div>
-  <Button type='submit' primary label='Submit' />
-</fieldset>
+      onChange={handleInputChange}
+    />
+    <Button type='submit' primary label='Submit' onClick={handleFormSubmit} />
+  </fieldset>
+</form>
 
 `;
 
@@ -168,13 +153,17 @@ export default function TutorialForms() {
               value={username}
               onChange={handleInputChange}
             />
+            <AlertMessage
+              alertType='information'
+              message='Password must be at least 8 characters.'
+            />
             <Input
               name='password'
               label='Password'
               type='password'
               minLength={8}
               error={!!passwordValidationError}
-              errorMessage={passwordValidationError || 'Password is at least 8 characters.'}
+              errorMessage={passwordValidationError}
               value={password}
               onChange={handleInputChange}
             />
