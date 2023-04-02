@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Nav } from 'grommet';
 import { Book } from 'grommet-icons';
 
-import Tutorials from './pages/tutorials/TutorialsData';
+import Tutorials from '@/components/pages/tutorials/TutorialsData';
 
 interface Tutorial {
   href: string;

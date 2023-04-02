@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Box, Heading, Page, Paragraph, Text } from 'grommet';
-import Tutorials from './TutorialsData';
+import Tutorials from '@/components/pages/tutorials/TutorialsData';
 
 export default function TutorialTodoList() {
   const tutorialName: string = Tutorials[1].title;

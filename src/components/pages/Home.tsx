@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Heading, Page, Paragraph, Text } from 'grommet';
-import ListNav from '../MainTutorialList';
+import ListNav from '@/components/MainTutorialList';
 
 export default function Home() {
   return (
