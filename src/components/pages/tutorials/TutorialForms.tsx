@@ -3,8 +3,8 @@ import { Anchor, Box, Button, Heading, Page, Text, Paragraph } from 'grommet';
 import { Accessibility } from 'grommet-icons';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import Tutorials from './TutorialsData';
-import AlertMessage from './../../Alerts';
+import Tutorials from '@/components/pages/tutorials/TutorialsData';
+import Input from '@/components/Input';
 
 export default function TutorialForms() {
   (function SetTitle() {
@@ -20,12 +20,12 @@ export default function TutorialForms() {
   <div className='input-group'>
     <label>
       <div className='margin-bottom-small'>Username</div>
-      <AlertMessage alertType='error' id='errorUsername' message={errorUsername} />
+      <AlertMessage alertType='error' id='usernameValidationError' message={usernameValidationError} />
       <input
-      aria-describedby='errorUsername'
-      aria-invalid={errorUsername ? 'true' : false}
+      aria-describedby='usernameValidationError'
+      aria-invalid={usernameValidationError ? 'true' : false}
       autoComplete='off'
-      className={errorUsername ? 'form-error' : ''}
+      className={usernameValidationError ? 'form-error' : ''}
       name='username'
       onChange={(e) => handleInputChange(e)}
       placeholder='your username'
@@ -43,12 +43,12 @@ export default function TutorialForms() {
       message='Password is at least 8 characters.'
       alertType='information'
       />
-      <AlertMessage alertType='error' id='errorPassword' message={errorPassword} />
+      <AlertMessage alertType='error' id='passwordValidationError' message={passwordValidationError} />
       <input
-      aria-describedby='errorPassword'
-      aria-invalid={errorPassword ? 'true' : false}
+      aria-describedby='passwordValidationError'
+      aria-invalid={passwordValidationError ? 'true' : false}
       autoComplete='off'
-      className={errorPassword ? 'form-error' : ''}
+      className={passwordValidationError ? 'form-error' : ''}
       onChange={(e) => handleInputChange(e)}
       minLength={8}
       name='password'
@@ -66,12 +66,12 @@ export default function TutorialForms() {
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [errorUsername, setErrorUsername] = useState('');
-  const [errorPassword, setErrorPassword] = useState('');
+  const [usernameValidationError, setUsernameValidationError] = useState('');
+  const [passwordValidationError, setPasswordValidationError] = useState('');
 
   const resetErrorMessages = () => {
-    setErrorUsername('');
-    setErrorPassword('');
+    setUsernameValidationError('');
+    setPasswordValidationError('');
   };
 
   const resetForm = () => {
@@ -84,8 +84,10 @@ export default function TutorialForms() {
     const value: string = (event.target as HTMLInputElement).value;
     if (name === 'username') {
       setUsername(value);
+      setUsernameValidationError('');
     } else if (name === 'password') {
       setPassword(value);
+      setPasswordValidationError('');
     }
   };
 
@@ -95,13 +97,13 @@ export default function TutorialForms() {
 
     if (!username.length || !password.length) {
       if (!username.length) {
-        setErrorUsername(`Error: Required information. Enter your username.`);
+        setUsernameValidationError(`Error: Required information. Enter your username.`);
       }
       if (!password.length) {
-        setErrorPassword('Error: Required information. Enter your password.');
+        setPasswordValidationError('Error: Required information. Enter your password.');
       }
       if (password.length > 1 && password.length < 8) {
-        setErrorPassword('Error: Password must be at least 8 characters.');
+        setPasswordValidationError('Error: Password must be at least 8 characters.');
       }
       return;
     }
@@ -152,58 +154,34 @@ export default function TutorialForms() {
         <Paragraph fill={true}>
           Here is an example of a simple username and password entry form.
         </Paragraph>
-        <form
-          className='outlined-thing background-white padded-thing-large'
-          noValidate
-          onSubmit={handleFormSubmit}
-        >
+
+        <form className='outlined-thing background-white padded-thing-large' noValidate>
           <fieldset>
             <legend>User Login</legend>
-            <div className='input-group'>
-              <label>
-                <div className='margin-bottom-small'>Username</div>
-                <AlertMessage alertType='error' id='errorUsername' message={errorUsername} />
-                <input
-                  aria-describedby='errorUsername'
-                  aria-invalid={errorUsername ? 'true' : false}
-                  autoComplete='off'
-                  className={errorUsername ? 'form-error' : ''}
-                  name='username'
-                  onChange={(e) => handleInputChange(e)}
-                  placeholder='your username'
-                  required
-                  type='text'
-                  value={username}
-                />
-              </label>
-            </div>
-            <div className='input-group'>
-              <label>
-                <div className='margin-bottom-small'>Password</div>
-                <AlertMessage
-                  id='passwordInformation'
-                  message='Password is at least 8 characters.'
-                  alertType='information'
-                />
-                <AlertMessage alertType='error' id='errorPassword' message={errorPassword} />
-                <input
-                  aria-describedby='errorPassword'
-                  aria-invalid={errorPassword ? 'true' : false}
-                  autoComplete='off'
-                  className={errorPassword ? 'form-error' : ''}
-                  onChange={(e) => handleInputChange(e)}
-                  minLength={8}
-                  name='password'
-                  placeholder='your password'
-                  required
-                  type='password'
-                  value={password}
-                />
-              </label>
-            </div>
-            <Button type='submit' primary label='Submit' />
+            <Input
+              name='username'
+              label='Username'
+              type='text'
+              minLength={0}
+              error={!!usernameValidationError}
+              errorMessage={usernameValidationError}
+              value={username}
+              onChange={handleInputChange}
+            />
+            <Input
+              name='password'
+              label='Password'
+              type='password'
+              minLength={8}
+              error={!!passwordValidationError}
+              errorMessage={passwordValidationError || 'Password is at least 8 characters.'}
+              value={password}
+              onChange={handleInputChange}
+            />
+            <Button type='submit' primary label='Submit' onClick={handleFormSubmit} />
           </fieldset>
         </form>
+
         <div className='code-box'>
           <SyntaxHighlighter language='jsx' style={a11yDark}>
             {codeString}
