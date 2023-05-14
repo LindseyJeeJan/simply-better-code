@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Box, Heading, Page, Paragraph, Text } from 'grommet';
 import Tutorials from './TutorialsData';
+import TodoList from './TutorialsTodos';
 
 export default function TutorialTodoList() {
   const tutorialName: string = Tutorials[1].title;
@@ -17,7 +18,7 @@ export default function TutorialTodoList() {
         <Text size='string'>{tutorialName}</Text>
       </Heading>
       <Box pad={'small'}>
-        <Paragraph fill={true}>Coming soon...</Paragraph>
+        <TodoList />
       </Box>
     </Page>
   );

@@ -43,3 +43,10 @@ main {
 .margin-bottom-small {
   margin-bottom: $small;
 }
+
+.checkbox-todo {
+  input {
+    -webkit-appearance: checkbox;
+    margin-right: 10px;
+  }
+}
