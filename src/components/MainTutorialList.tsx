@@ -14,7 +14,7 @@ interface Tutorial {
 const tutorialItems = Tutorials.map((tutorial: Tutorial) => (
   <li className='nav-list__item' key={uuid()}>
     <Link className='nav-list__link' to={tutorial.href}>
-      <Book color='plain' size='medium' /> {tutorial.title}
+      <Book size='small' /> {tutorial.title}
     </Link>
   </li>
 ));

@@ -9,8 +9,8 @@ export default function Home() {
         <Heading level={1} textAlign='center'>
           <Text size='string'>simply better code</Text>
         </Heading>
-        <Paragraph fill={true}>
-          &hellip;because accessible code doesn&apos;t have to be complicated
+        <Paragraph textAlign='center'>
+          Accessible code doesn&apos;t have to be complicated.
         </Paragraph>
       </Box>
       <Box pad={'large'} fill='horizontal'>

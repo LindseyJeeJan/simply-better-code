@@ -22,10 +22,11 @@ h3,
 h4,
 h5,
 h6 {
-  color: $dark-color;
+  color: $contrast-color;
   font-family: Avenir, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
     Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
     'Noto Color Emoji', sans-serif;
+  letter-spacing: -1px;
   line-height: 150%;
   margin-bottom: 1rem;
   text-transform: capitalize;
@@ -57,11 +58,11 @@ svg.link {
 
 legend {
   font-size: 120%;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .bold {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .italics {
