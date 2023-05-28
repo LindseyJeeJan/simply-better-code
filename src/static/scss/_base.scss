@@ -2,7 +2,6 @@
 @import 'variables';
 
 body {
-  background-color: $off-white-color;
   margin: 0;
 }
 
@@ -20,6 +19,12 @@ html,
 footer,
 header {
   flex-grow: 0;
+  background-color: $dark-color;
+  color: $off-white-color;
+  a {
+    vertical-align: middle;
+    line-height: 100% !important;
+  }
 }
 
 header {

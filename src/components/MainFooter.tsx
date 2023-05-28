@@ -11,16 +11,16 @@ export default function MainFooter() {
             href='https://github.com/LindseyJeeJan'
             aria-label='Lindsey Lauria GitHub account'
           >
-            <Github aria-hidden='true' />
+            <Github color='white' aria-hidden='true' />
           </Anchor>
           <Anchor
             href='https://www.linkedin.com/in/lindseyjjlauria/'
             aria-label='Lindsey Lauria LinkedIn account'
           >
-            <Linkedin aria-hidden='true' />
+            <Linkedin color='white' aria-hidden='true' />
           </Anchor>
         </div>
-        <Text size='small' className='copyright'>
+        <Text size='xsmall' className='copyright'>
           Copyright Lindsey Lauria &copy;2023
         </Text>
       </Footer>
