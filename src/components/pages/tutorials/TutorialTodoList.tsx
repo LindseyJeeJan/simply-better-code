@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Box, Heading, Page, Paragraph, Text } from 'grommet';
+import { Box, Heading, Page, Text } from 'grommet';
 import Tutorials from './TutorialsData';
 import TodoList from './TutorialsTodos';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
