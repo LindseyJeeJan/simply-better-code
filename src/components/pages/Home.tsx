@@ -10,7 +10,7 @@ export default function Home() {
           <Text size='string'>simply better code</Text>
         </Heading>
         <Paragraph textAlign='center'>
-          Accessible code doesn&apos;t have to be complicated.
+          Writing accessible code doesn&apos;t have to be complicated.
         </Paragraph>
       </Box>
       <Box pad={'large'} fill='horizontal'>
