@@ -31,7 +31,7 @@ export default function Checkbox({ label, onChange }: Props) {
   return (
     <Page kind='wide' fill='horizontal' pad='large'>
       <Heading level={1} className='tutorial-heading'>
-        <Text size='string'>{tutorialName}</Text>
+        <Text size='xxlarge'>{tutorialName}</Text>
       </Heading>
       <Box pad={'small'}>
         <TodoList />

@@ -8,9 +8,17 @@ export default function Home() {
     <Page kind='full' fill='horizontal' pad='medium' align='center' justify='center'>
       <Box pad={'xlarge'}>
         <Heading className='home' level={1} textAlign='center'>
-          <Text size='5xl'>simply better code</Text>
+          <Text size='4xl'>simply better code</Text>
         </Heading>
-        <Box pad={'xsmall'} flex={true} direction={'row'} align={'center'} wrap={false}>
+        <Box
+          width={'100%'}
+          pad={'small'}
+          flex={'grow'}
+          direction={'row'}
+          align={'center'}
+          wrap={false}
+          justify='center'
+        >
           <Paragraph textAlign='end'>
             <svg
               aria-label='react logo'
@@ -26,7 +34,7 @@ export default function Home() {
             </svg>
           </Paragraph>
           <Paragraph textAlign='start'>
-            <Text> Writing accessible code doesn&apos;t have to be complicated.</Text>
+            <Text size='large'> Writing accessible code doesn&apos;t have to be complicated.</Text>
           </Paragraph>
         </Box>
       </Box>

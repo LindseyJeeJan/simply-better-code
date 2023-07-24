@@ -7,7 +7,7 @@ export default function TutorialTemplate() {
   return (
     <Page kind='wide' fill='horizontal' pad='large'>
       <Heading level={1}>
-        <Text size='string'></Text>
+        <Text size='xxlarge'></Text>
       </Heading>
       <Box pad={'large'}>
         <Outlet />
