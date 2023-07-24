@@ -38,9 +38,10 @@
       align-items: center;
       display: flex;
       padding: 1rem;
+      transition-duration: 150ms;
 
       &:hover {
-        background-color: $gray-color-light;
+        background-color: #b9e5ff;
       }
 
       svg {

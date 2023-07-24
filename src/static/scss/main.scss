@@ -44,6 +44,10 @@ a {
 header {
   a {
     color: $off-white-color !important;
+    &:hover {
+      text-underline-offset: 3px;
+      transition-duration: 50ms;
+    }
   }
 }
 

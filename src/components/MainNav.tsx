@@ -5,10 +5,6 @@ import { NavLink } from 'react-router-dom';
 
 const navLocations = [
   {
-    href: '/',
-    label: 'Home',
-  },
-  {
     href: '/about',
     label: 'About',
   },
