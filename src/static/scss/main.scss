@@ -7,6 +7,15 @@
 @use 'typography';
 @import 'variables';
 
+.App-logo {
+  height: 10vmin;
+  opacity: 0.5;
+  pointer-events: none;
+  g {
+    fill: $contrast-color;
+  }
+}
+
 a,
 button,
 input,
@@ -25,6 +34,7 @@ a {
   cursor: pointer;
   font-weight: normal !important;
   text-decoration: underline !important;
+  text-underline-offset: 2px;
 
   &:focus-visible {
     background-color: #eee2f0;
