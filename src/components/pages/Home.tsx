@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <Page kind='full' fill='horizontal' pad='medium' align='center' justify='center'>
       <Box pad={'xlarge'}>
-        <Heading level={1} textAlign='center'>
+        <Heading className='home' level={1} textAlign='center'>
           <Text size='5xl'>simply better code</Text>
         </Heading>
         <Box pad={'xsmall'} flex={true} direction={'row'} align={'center'} wrap={false}>
@@ -31,8 +31,8 @@ export default function Home() {
         </Box>
       </Box>
       <Box pad={'large'} fill='horizontal'>
-        <Heading id='tutorial-heading' level={2}>
-          <Text size='string'>tutorials</Text>
+        <Heading id='tutorial-heading' level={2} size={'medium'}>
+          <Text size='string'>articles</Text>
         </Heading>
         <section aria-labelledby='tutorial-heading'>
           <ListNav />
