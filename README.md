@@ -16,8 +16,6 @@ Simply Better Code chronicles my journey in learning how to build and optimze ac
 
 ## Usage
 
-[View Deployed Application](https://lindseyjeejan.github.io/my-portfolio-react/)
-
 To begin, install dependencies by running
 
 ```
