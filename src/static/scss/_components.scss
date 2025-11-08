@@ -30,18 +30,18 @@
   .nav-list__item {
     &::after {
       content: '';
-      border-bottom: 1px solid $gray-color-light;
       display: block;
     }
 
     .nav-list__link {
       align-items: center;
+      border-bottom: 1px solid $gray-color-light;
       display: flex;
       padding: 1rem;
       transition-duration: 150ms;
 
       &:hover {
-        background-color: #b9e5ff;
+        background-color: #e2f3fd;
       }
 
       svg {
