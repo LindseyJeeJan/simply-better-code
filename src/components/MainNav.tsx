@@ -15,7 +15,6 @@ const navItems = navLocations.map((link) => (
     color={'light'}
     key={uuid()}
     to={link.href}
-    replace
     className={({ isActive, isPending }) => (isActive ? 'active' : isPending ? 'pending' : '')}
   >
     {link.label}
