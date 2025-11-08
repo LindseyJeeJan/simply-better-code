@@ -1,13 +1,16 @@
-import { ReportHandler } from 'web-vitals';
+// `web-vitals` v5 changed exported functions/types. Use runtime-safe access
+// so TypeScript doesn't error when the package shape differs.
+type ReportHandler = (metric: any) => void;
 
 const reportWebVitals = (onPerfEntry?: ReportHandler) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS(onPerfEntry);
-      getFID(onPerfEntry);
-      getFCP(onPerfEntry);
-      getLCP(onPerfEntry);
-      getTTFB(onPerfEntry);
+    import('web-vitals').then((wv) => {
+      const webVitals: any = wv;
+      webVitals.getCLS?.(onPerfEntry);
+      webVitals.getFID?.(onPerfEntry);
+      webVitals.getFCP?.(onPerfEntry);
+      webVitals.getLCP?.(onPerfEntry);
+      webVitals.getTTFB?.(onPerfEntry);
     });
   }
 };
