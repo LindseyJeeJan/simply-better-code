@@ -3,27 +3,36 @@ import uuid from 'react-uuid';
 import { Nav } from 'grommet';
 import { NavLink } from 'react-router-dom';
 
-const navLocations = [
-  {
-    href: '/about',
-    label: 'About',
-  },
+type NavLocation = {
+  href: string;
+  label: string;
+};
+
+const navLocations: NavLocation[] = [
+  // {
+  //   href: '/about',
+  //   label: 'About',
+  // },
 ];
 
-const navItems = navLocations.map((link) => (
-  <NavLink
-    color={'light'}
-    key={uuid()}
-    to={link.href}
-    replace
-    className={({ isActive, isPending }) => (isActive ? 'active' : isPending ? 'pending' : '')}
-  >
-    {link.label}
-  </NavLink>
-));
+const navItems =
+  navLocations && navLocations.length
+    ? navLocations.map((link) => (
+        <NavLink
+          color={'light'}
+          key={uuid()}
+          to={link.href}
+          className={({ isActive, isPending }) =>
+            isActive ? 'active' : isPending ? 'pending' : ''
+          }
+        >
+          {link.label}
+        </NavLink>
+      ))
+    : [];
 
 export default function MainNav() {
-  return (
+  return navLocations.length > 0 ? (
     <Nav
       className='main-nav'
       aria-label='main navigation'
@@ -33,5 +42,7 @@ export default function MainNav() {
     >
       {navItems}
     </Nav>
+  ) : (
+    <></>
   );
 }
