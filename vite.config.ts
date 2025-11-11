@@ -4,6 +4,10 @@ import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // For GitHub Pages project site, set base to the repo name.
+  // This ensures asset URLs are generated correctly when served from
+  // https://<user>.github.io/<repo>/
+  base: '/simply-better-code/',
   plugins: [react()],
   resolve: {
     alias: {
@@ -20,9 +24,13 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  // Output build to `docs` so GitHub Pages can serve from `main`/`docs`
+  build: {
+    outDir: 'docs',
+  },
   test: {
     environment: 'jsdom',
     globals: true,
     setupFiles: 'src/tests/setupTests.ts',
   },
-});
+} as any);
