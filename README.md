@@ -6,6 +6,10 @@
 
 Simply Better Code chronicles my journey in learning how to build and optimze accessibile single page applications. This SPA single page application is built with React and with accessiblity in mind.
 
+## Deployed Application
+
+View application https://lindseyjeejan.github.io/simply-better-code/
+
 ## Table of Contents
 
 - [Usage](#usage)
