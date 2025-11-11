@@ -1,9 +1,14 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import App from 'components/App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders app title', () => {
+  const { getByText } = render(
+    <MemoryRouter>
+      <App />
+    </MemoryRouter>
+  );
+  const title = getByText(/Simply Better Code/i);
+  expect(title).toBeInTheDocument();
 });
