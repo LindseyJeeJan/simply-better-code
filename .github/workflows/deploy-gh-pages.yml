@@ -1,5 +1,8 @@
 name: Build and Deploy to gh-pages
 
+permissions:
+  contents: write
+
 on:
   push:
     branches: [main]
@@ -10,6 +13,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # needed so the deploy action can push the gh-pages branch
+          fetch-depth: 0
+          persist-credentials: true
 
       - name: Use Node.js
         uses: actions/setup-node@v4
@@ -17,6 +24,15 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies (use Yarn when available)
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            ~/.cache/yarn
+            node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock', '**/package-lock.json') }}
+
+      - name: Install deps
         run: |
           if [ -f yarn.lock ]; then
             yarn install --frozen-lockfile
