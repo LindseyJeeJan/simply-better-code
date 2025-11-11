@@ -32,10 +32,10 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-  "serve": "vite",
-  "build": "vite build",
-  "build:root": "DEPLOY_BASE='/' vite build && cp -R dist/* . && rm -rf dist && cp -f index.html 404.html",
-  "postbuild": "cp -f docs/index.html docs/404.html",
+    "serve": "vite",
+    "build": "vite build",
+    "build:root": "DEPLOY_BASE='/' vite build && cp -R dist/* . && rm -rf dist && cp -f index.html 404.html",
+    "postbuild": "cp -f docs/index.html docs/404.html",
     "preview": "vite preview",
     "test": "vitest",
     "test:ci": "vitest --run --reporter verbose",
