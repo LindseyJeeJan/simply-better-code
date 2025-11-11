@@ -7,7 +7,7 @@ test('renders app title', () => {
   const { getByText } = render(
     <MemoryRouter>
       <App />
-    </MemoryRouter>
+    </MemoryRouter>,
   );
   const title = getByText(/Simply Better Code/i);
   expect(title).toBeInTheDocument();
