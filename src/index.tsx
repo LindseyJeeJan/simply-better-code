@@ -20,36 +20,20 @@ const router = createBrowserRouter(
       element: <App />,
       errorElement: <Error />,
       children: [
-        {
-          path: '',
-          element: <Home />,
-        },
-        {
-          path: 'about',
-          element: <About />,
-        },
-        {
-          path: 'tutorials/tutorial-forms',
-          element: <TutorialForms />,
-        },
-        {
-          path: 'tutorials/tutorial-todo-list',
-          element: <TutorialTodoList />,
-        },
-        // Redirect to a custom error page
-        {
-          path: '*',
-          element: <Navigate to='/error404' />,
-        },
-        // Custom error page
-        {
-          path: 'error404',
-          element: <Error404 />,
-        },
+        { index: true, element: <Home /> },
+        { path: 'about', element: <About /> },
+        { path: 'tutorials/tutorial-forms', element: <TutorialForms /> },
+        { path: 'tutorials/tutorial-todo-list', element: <TutorialTodoList /> },
+        { path: 'error404', element: <Error404 /> },
+
+        // Redirect everything else
+        { path: '*', element: <Navigate to='/error404' /> },
       ],
     },
   ],
-  { basename: 'simply-better-code' },
+  {
+    basename: 'simply-better-code',
+  },
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
