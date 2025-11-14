@@ -412,4 +412,4 @@ export default function Checkbox({ label, onChange }: Props) {
   );
 }
 
-`})})]})]})}const ZW=qL([{path:"/",element:x.jsx(dB,{}),errorElement:x.jsx(hB,{}),children:[{index:!0,element:x.jsx(mB,{})},{path:"about",element:x.jsx(pB,{})},{path:"tutorials/tutorial-forms",element:x.jsx(WW,{})},{path:"tutorials/tutorial-todo-list",element:x.jsx(XW,{})},{path:"error404",element:x.jsx(bB,{})},{path:"*",element:x.jsx(DL,{to:"/error404"})}]}],{basename:"simply-better-code"}),QW=Ig.createRoot(document.getElementById("root"));QW.render(x.jsx(LL,{router:ZW}));
+`})})]})]})}const ZW=qL([{path:"/",element:x.jsx(dB,{}),errorElement:x.jsx(hB,{}),children:[{index:!0,element:x.jsx(mB,{})},{path:"about",element:x.jsx(pB,{})},{path:"tutorials/tutorial-forms",element:x.jsx(WW,{})},{path:"tutorials/tutorial-todo-list",element:x.jsx(XW,{})},{path:"error404",element:x.jsx(bB,{})},{path:"*",element:x.jsx(DL,{to:"/error404"})}]}],{basename:"/simply-better-code"}),QW=Ig.createRoot(document.getElementById("root"));QW.render(x.jsx(LL,{router:ZW}));
