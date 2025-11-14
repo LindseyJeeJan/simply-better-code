@@ -10,6 +10,9 @@ export default defineConfig({
   // build. Example: DEPLOY_BASE='/' npm run build:root
   //base: process.env.DEPLOY_BASE || '/simply-better-code/',
   base: '/simply-better-code/',
+  build: {
+    outDir: 'docs',
+  },
   plugins: [react()],
   resolve: {
     alias: {
