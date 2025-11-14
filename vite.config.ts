@@ -8,7 +8,8 @@ export default defineConfig({
   // To build for the repo root (for Pages configured to serve from the root
   // of the branch), set the DEPLOY_BASE env var to '/' before running the
   // build. Example: DEPLOY_BASE='/' npm run build:root
-  base: process.env.DEPLOY_BASE || '/simply-better-code/',
+  //base: process.env.DEPLOY_BASE || '/simply-better-code/',
+  base: '/simply-better-code/',
   plugins: [react()],
   resolve: {
     alias: {
