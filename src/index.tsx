@@ -32,7 +32,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: '/simply-better-code/',
+    basename: 'simply-better-code',
   },
 );
 
