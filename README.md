@@ -8,7 +8,7 @@ Simply Better Code chronicles my journey in learning how to build and optimze ac
 
 ## Deployed Application
 
-View application https://lindseyjeejan.github.io/simply-better-code/
+[View application](https://lindseyjeejan.github.io/simply-better-code)
 
 ## Table of Contents
 
