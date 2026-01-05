@@ -2,7 +2,7 @@ import React from 'react';
 
 export interface Props {
   label: string;
-  onChange: any;
+  onChange: (checked: boolean) => void;
 }
 
 export default function Checkbox({ label, onChange }: Props) {

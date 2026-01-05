@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, Heading, Page, Paragraph, Text } from 'grommet';
 import ListNav from '../MainTutorialList';
-import { Italic } from 'grommet-icons';
 
 export default function Home() {
   return (

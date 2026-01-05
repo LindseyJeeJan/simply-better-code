@@ -34,4 +34,4 @@ export default defineConfig({
     globals: true,
     setupFiles: 'src/tests/setupTests.ts',
   },
-} as any);
+});

@@ -1146,7 +1146,7 @@
   dependencies:
     "@types/json-schema" "^7.0.15"
 
-"@eslint/eslintrc@^3.3.1":
+"@eslint/eslintrc@^3.3.1", "@eslint/eslintrc@^3.3.3":
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-3.3.3.tgz#26393a0806501b5e2b6a43aa588a4d8df67880ac"
   integrity sha512-Kr+LPIUVKz2qkx1HAMH8q1q6azbqBAsXJUxBl/ODDuVPX45Z9DfwB8tPjTi6nNZ8BuM3nbJxC5zCAg5elnBUTQ==
@@ -5106,6 +5106,16 @@ typed-array-length@^1.0.7:
     is-typed-array "^1.1.13"
     possible-typed-array-names "^1.0.0"
     reflect.getprototypeof "^1.0.6"
+
+typescript-eslint@^8.51.0:
+  version "8.51.0"
+  resolved "https://registry.yarnpkg.com/typescript-eslint/-/typescript-eslint-8.51.0.tgz#3cf2ead3d7c5adf940fbac213c043370c0c000b2"
+  integrity sha512-jh8ZuM5oEh2PSdyQG9YAEM1TCGuWenLSuSUhf/irbVUNW9O5FhbFVONviN2TgMTBnUmyHv7E56rYnfLZK6TkiA==
+  dependencies:
+    "@typescript-eslint/eslint-plugin" "8.51.0"
+    "@typescript-eslint/parser" "8.51.0"
+    "@typescript-eslint/typescript-estree" "8.51.0"
+    "@typescript-eslint/utils" "8.51.0"
 
 typescript@^5.9.3:
   version "5.9.3"

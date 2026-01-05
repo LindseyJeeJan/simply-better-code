@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Checkbox from 'components/Checkbox';
 
 const todosList: { label: string; isComplete: boolean }[] = [
@@ -15,14 +15,8 @@ const todosList: { label: string; isComplete: boolean }[] = [
 ];
 
 export default function TodoList() {
-  const [checked, setChecked] = useState(false);
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.checked === true) {
-      setChecked(false);
-    } else {
-      setChecked(true);
-    }
+  const handleChange = () => {
+    // Handle change if needed
   };
 
   const ListItems = todosList.map((todo, index) => (

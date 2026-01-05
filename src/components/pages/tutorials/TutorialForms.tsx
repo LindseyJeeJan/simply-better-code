@@ -8,13 +8,13 @@ import Input from '../../Input';
 import AlertMessage from '../../Alerts';
 
 export default function TutorialForms() {
+  const tutorialName: string = Tutorials[0].title;
+
   (function SetTitle() {
     useEffect(() => {
       document.title = tutorialName;
     }, []);
   })();
-
-  const tutorialName: string = Tutorials[0].title;
   const codeString = `
 <form className='outlined-thing background-white padded-thing-large' noValidate>
   <fieldset>

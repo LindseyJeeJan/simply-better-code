@@ -2,8 +2,8 @@ declare module 'react-syntax-highlighter/dist/cjs/create-element' {
   import React from 'react';
 
   export type SyntaxHighlightNode =
-    | (TextNode & Partial<Record<keyof TagNode<any>, never>>)
-    | (TagNode<any> & Partial<Record<keyof TextNode, never>>);
+    | (TextNode & Partial<Record<keyof TagNode<React.ElementType>, never>>)
+    | (TagNode<React.ElementType> & Partial<Record<keyof TextNode, never>>);
 
   export interface TextNode {
     type: 'text';

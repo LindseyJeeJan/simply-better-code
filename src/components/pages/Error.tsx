@@ -3,7 +3,7 @@ import { Link, useRouteError } from 'react-router-dom';
 import { Box, Heading, Paragraph, Text } from 'grommet';
 
 export default function ErrorPage() {
-  const error: any | unknown = useRouteError();
+  const error = useRouteError() as Error;
   console.error(error);
 
   const errorTitle = 'Error – ';

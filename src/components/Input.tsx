@@ -9,7 +9,7 @@ export interface Props {
   error: boolean | undefined;
   errorMessage?: string | undefined;
   value?: string;
-  onChange: any;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export default function Input({
