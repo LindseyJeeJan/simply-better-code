@@ -5,7 +5,7 @@
 @use 'layouts';
 @use 'mixins';
 @use 'typography';
-@import 'variables';
+@use 'variables' as *;
 
 .App-logo {
   height: 10vmin;

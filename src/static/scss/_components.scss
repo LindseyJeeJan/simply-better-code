@@ -1,4 +1,4 @@
-@import '/src/static/scss/variables';
+@use 'variables' as *;
 
 .code-box {
   margin: 10px 0;
