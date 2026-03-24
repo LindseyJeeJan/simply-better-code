@@ -1,5 +1,61 @@
 @use 'mixins' as *;
 
+.page-wide {
+  width: 100%;
+  max-width: 860px;
+  padding: 2rem;
+
+  @include phone-breakpoint {
+    padding: 1rem;
+  }
+}
+
+.page-home {
+  width: 100%;
+  max-width: 860px;
+  padding: 2rem;
+
+  @include phone-breakpoint {
+    padding: 1rem;
+  }
+}
+
+.home-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0 1rem;
+}
+
+.home-intro {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+
+  @include phone-breakpoint {
+    flex-direction: column;
+  }
+}
+
+.home-tagline {
+  font-size: 1.1rem;
+  text-align: left;
+
+  @include phone-breakpoint {
+    text-align: center;
+  }
+}
+
+.home-articles {
+  padding: 1rem 0;
+}
+
+.tutorial-content {
+  padding: 0.5rem 0;
+}
+
 .columns {
   display: flex;
   flex-wrap: nowrap;

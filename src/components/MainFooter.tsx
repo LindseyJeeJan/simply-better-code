@@ -30,7 +30,7 @@ export default function MainFooter() {
           </svg>
         </a>
       </div>
-      <span className='copyright'>Copyright Lindsey Lauria &copy;2025</span>
+      <span className='copyright'>Copyright Lindsey Lauria &copy;2026</span>
     </footer>
   );
 }

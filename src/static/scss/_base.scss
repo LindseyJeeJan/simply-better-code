@@ -9,16 +9,15 @@ html {
   box-sizing: border-box;
 }
 
-body,
-html,
-#root,
 .app-main {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 footer,
 header {
-  flex-grow: 0;
+  flex-shrink: 0;
   background-color: $dark-color;
   color: $off-white-color;
   a {
@@ -28,14 +27,22 @@ header {
 }
 
 header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
   border-bottom: 1px solid $gray-color-light;
 }
 
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
   border-top: 1px solid $gray-color-light;
   font-size: 80%;
   a {
-    margin: 0 15px;
+    margin: 0 10px;
   }
 }
 
