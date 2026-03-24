@@ -1,5 +1,4 @@
 import uuid from 'react-uuid';
-import { Nav } from 'grommet';
 import { NavLink } from 'react-router-dom';
 
 type NavLocation = {
@@ -18,7 +17,6 @@ const navItems =
   navLocations && navLocations.length
     ? navLocations.map((link) => (
         <NavLink
-          color={'light'}
           key={uuid()}
           to={link.href}
           className={({ isActive, isPending }) =>
@@ -32,15 +30,9 @@ const navItems =
 
 export default function MainNav() {
   return navLocations.length > 0 ? (
-    <Nav
-      className='main-nav'
-      aria-label='main navigation'
-      direction='row'
-      gap='medium'
-      align='center'
-    >
+    <nav className='main-nav' aria-label='main navigation'>
       {navItems}
-    </Nav>
+    </nav>
   ) : (
     <></>
   );

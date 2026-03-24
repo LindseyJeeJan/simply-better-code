@@ -1,34 +1,24 @@
 import { useEffect } from 'react';
 import { Link, useRouteError } from 'react-router-dom';
-import { Box, Heading, Paragraph, Text } from 'grommet';
 
 export default function ErrorPage() {
   const error = useRouteError() as Error;
   console.error(error);
 
-  const errorTitle = 'Error – ';
-  (function SetTitle() {
-    useEffect(() => {
-      document.title = errorTitle.concat(document.title);
-    }, []);
-  })();
+  useEffect(() => {
+    document.title = 'Error – Simply Better Code';
+  }, []);
 
   return (
-    <Box height='100vh'>
-      <main>
-        <Box id='error-page' justify='center'>
-          <Heading level={1}>
-            <Text size='string'>Error</Text>
-          </Heading>
-          <Paragraph fill={true}>We&apos;re sorry, an unexpected error has occurred.</Paragraph>
-          <Paragraph fill={true}>
-            <Text size='string'>{error?.statusText || error?.message}</Text>
-          </Paragraph>
-          <Paragraph fill={true}>
-            Return to the <Link to='/'>homepage</Link>.
-          </Paragraph>
-        </Box>
+    <div className='app-main'>
+      <main id='error-page'>
+        <h1>Error</h1>
+        <p>We&apos;re sorry, an unexpected error has occurred.</p>
+        <p>{error?.statusText || error?.message}</p>
+        <p>
+          Return to the <Link to='/'>homepage</Link>.
+        </p>
       </main>
-    </Box>
+    </div>
   );
 }

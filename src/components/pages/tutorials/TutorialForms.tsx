@@ -1,6 +1,4 @@
 import { useState, useEffect, ChangeEvent, FormEvent } from 'react';
-import { Anchor, Box, Button, Heading, Page, Text, Paragraph } from 'grommet';
-import { Accessibility } from 'grommet-icons';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import Tutorials from './TutorialsData';
@@ -13,6 +11,7 @@ export default function TutorialForms() {
   useEffect(() => {
     document.title = tutorialName;
   }, [tutorialName]);
+
   const codeString = `
 <form className='outlined-thing background-white padded-thing-large' noValidate>
   <fieldset>
@@ -41,7 +40,7 @@ export default function TutorialForms() {
       value={password}
       onChange={handleInputChange}
     />
-    <Button type='submit' primary label='Submit' onClick={handleFormSubmit} />
+    <button type='submit'>Submit</button>
   </fieldset>
 </form>
 
@@ -98,46 +97,41 @@ export default function TutorialForms() {
   };
 
   return (
-    <Page kind='wide' fill='horizontal' pad='large'>
-      <Heading level={1} className='tutorial-heading'>
-        <Text size='xxlarge'>{tutorialName}</Text>
-      </Heading>
-      <Box pad={'small'}>
-        <Paragraph fill={true}>
+    <div className='page-wide'>
+      <h1 className='tutorial-heading'>{tutorialName}</h1>
+      <div className='tutorial-content'>
+        <p>
           To build an accessible form, it&apos;s important to consider that users typically prefer
           simple and short forms. Overly complicated or non-intuitive forms can lead to cognitive
           fatigue or frustration which can lead to users abandoning the task. As a developer whose
           job is to gather user information, this means we have failed our goal.
-        </Paragraph>
+        </p>
 
-        <Paragraph fill={true} className='paragraph__no-margin'>
+        <p className='paragraph__no-margin'>
           All forms have some things to consider through the lens of accessibility:
-        </Paragraph>
-        <Text margin='small'>
-          <ul className='styled-list'>
-            <li>
-              <span className='bold'>Grouping of controls:</span> If a group exists, it is marked as
-              a group or grouped using a fielset element. The group has a label and instructions, if
-              needed.
-            </li>
-            <li>
-              <span className='bold'>Instructions:</span> Requirements and/or formats are provided.
-            </li>
-            <li>
-              <span className='bold'>Labels:</span> A concise and accessible label is
-              programmatically linked to each form field.
-            </li>
-            <li>
-              <span className='bold'>Validation:</span> Errors are clearly marked and help is
-              provided to explain why an error has occurred as well as how to fix it. Error
-              messaging persists until errors are fixed. The messaging is close to the field that
-              needs help and is programmatically associated to the field.
-            </li>
-          </ul>
-        </Text>
-        <Paragraph fill={true}>
-          Here is an example of a simple username and password entry form.
-        </Paragraph>
+        </p>
+        <ul className='styled-list'>
+          <li>
+            <span className='bold'>Grouping of controls:</span> If a group exists, it is marked as a
+            group or grouped using a fieldset element. The group has a label and instructions, if
+            needed.
+          </li>
+          <li>
+            <span className='bold'>Instructions:</span> Requirements and/or formats are provided.
+          </li>
+          <li>
+            <span className='bold'>Labels:</span> A concise and accessible label is programmatically
+            linked to each form field.
+          </li>
+          <li>
+            <span className='bold'>Validation:</span> Errors are clearly marked and help is provided
+            to explain why an error has occurred as well as how to fix it. Error messaging persists
+            until errors are fixed. The messaging is close to the field that needs help and is
+            programmatically associated to the field.
+          </li>
+        </ul>
+
+        <p>Here is an example of a simple username and password entry form.</p>
 
         <form className='outlined-thing background-white padded-thing-large' noValidate>
           <fieldset>
@@ -166,7 +160,9 @@ export default function TutorialForms() {
               value={password}
               onChange={handleInputChange}
             />
-            <Button type='submit' primary label='Submit' onClick={handleFormSubmit} />
+            <button type='submit' className='btn-primary' onClick={handleFormSubmit}>
+              Submit
+            </button>
             {loginSuccess && (
               <AlertMessage alertType='information' message='Login was successful.' />
             )}
@@ -178,42 +174,40 @@ export default function TutorialForms() {
             {codeString}
           </SyntaxHighlighter>
         </div>
-        <Paragraph fill={true}>
+
+        <p>
           By using semantic HTML elements and responsive web design principles, we increase the
           likelihood that it will display properly on a wide range of devices, including mobile
           devices with smaller screens. We also ensure support by assistive technologies.
-        </Paragraph>
-        <Paragraph fill={true}>
+        </p>
+        <p>
           The form includes clear and descriptive labels for each input field, which can help users
           understand what information is required in each field. Additionally, the use of a&nbsp;
           <span className='code'>fieldset</span> element and a <span className='code'>legend</span>{' '}
           tag to group related inputs can help users with screen readers navigate the form more
           easily.
-        </Paragraph>
-        <Paragraph fill={true}>
+        </p>
+        <p>
           Error messages are associated with each input field. This means that if a user enters
           invalid information into a field, they will receive an error message that is directly
           associated with that field, rather than a generic error message that does not provide
           specific guidance.
-        </Paragraph>
-
-        <Paragraph fill={true}>
+        </p>
+        <p>
           The use of the <span className='code'>noValidate</span> attribute in the form element
           means that the form will not be validated by the browser itself. This can be beneficial
           for users who may be using assistive technologies that do not work well with browser-based
-          validation, or for users who have disabled browser-based validation for personal
-          preference or security reasons.
-        </Paragraph>
+          validation, or for users who have disabled browser-based validation for personal preference
+          or security reasons.
+        </p>
+
         <div className='outlined-thing padded-thing-small'>
-          <h2 className='bold'>
-            <Accessibility color='gray' size='medium' aria-hidden='true' />
-            Resources
-          </h2>
-          <Anchor href='https://www.w3.org/WAI/tutorials/forms/' target={'_blank'}>
+          <h2 className='bold'>Resources</h2>
+          <a href='https://www.w3.org/WAI/tutorials/forms/' target='_blank' rel='noreferrer'>
             W3C Web Accessibility Initiative Forms Tutorial
-          </Anchor>
+          </a>
         </div>
-      </Box>
-    </Page>
+      </div>
+    </div>
   );
 }

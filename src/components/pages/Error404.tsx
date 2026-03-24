@@ -1,33 +1,18 @@
 import { useEffect } from 'react';
-import { Link, useRouteError } from 'react-router-dom';
-import { Box, Heading, Paragraph, Text } from 'grommet';
+import { Link } from 'react-router-dom';
 
-export default function ErrorPage() {
-  const error = useRouteError() as Error;
-  console.error(error);
-
-  const errorTitle = 'Error 404 Page Not Found – ';
-  (function SetTitle() {
-    useEffect(() => {
-      document.title = errorTitle.concat(document.title);
-    }, []);
-  })();
+export default function Error404Page() {
+  useEffect(() => {
+    document.title = 'Error 404 Page Not Found – Simply Better Code';
+  }, []);
 
   return (
-    <Box className='app-main'>
-      <main>
-        <Box id='error-page' justify='center'>
-          <Heading level={1}>
-            <Text size='string'>404 Page Not Found</Text>
-          </Heading>
-          <Paragraph fill={true}>The page you&apos;re looking for does not exist.</Paragraph>
-          <Paragraph fill={true}>
-            <Text size='string'>
-              Please check the URL and try again, or return to the <Link to='/'>homepage</Link>.
-            </Text>
-          </Paragraph>
-        </Box>
-      </main>
-    </Box>
+    <main id='error-page'>
+      <h1>404 Page Not Found</h1>
+      <p>The page you&apos;re looking for does not exist.</p>
+      <p>
+        Please check the URL and try again, or return to the <Link to='/'>homepage</Link>.
+      </p>
+    </main>
   );
 }
