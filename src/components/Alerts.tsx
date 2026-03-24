@@ -1,4 +1,3 @@
-import React from 'react';
 import { Alert, CircleInformation } from 'grommet-icons';
 
 export interface Props {

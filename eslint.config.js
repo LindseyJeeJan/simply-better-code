@@ -11,6 +11,7 @@ export default [
   js.configs.recommended,
   ...tseslint.configs.recommended,
   ...compat.extends('plugin:react/recommended'),
+  ...compat.extends('plugin:react/jsx-runtime'),
   ...compat.extends('plugin:react-hooks/recommended'),
   ...compat.extends('prettier'),
   {

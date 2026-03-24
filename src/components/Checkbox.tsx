@@ -1,15 +1,21 @@
-import React from 'react';
-
 export interface Props {
+  index?: number;
   label: string;
+  isChecked?: boolean;
   onChange: (checked: boolean) => void;
 }
 
-export default function Checkbox({ label, onChange }: Props) {
+export default function Checkbox({ index, label, isChecked, onChange }: Props) {
   return (
     <div className='checkbox'>
       <label>
-        <input name={label} onChange={onChange} type='checkbox' value={label} />
+        <input
+          type='checkbox'
+          name={label}
+          value={index}
+          checked={isChecked}
+          onChange={(e) => onChange(e.target.checked)}
+        />
         {label}
       </label>
     </div>

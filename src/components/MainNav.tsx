@@ -1,4 +1,3 @@
-import React from 'react';
 import uuid from 'react-uuid';
 import { Nav } from 'grommet';
 import { NavLink } from 'react-router-dom';

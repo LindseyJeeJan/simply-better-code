@@ -1,4 +1,4 @@
-import React from 'react';
+import type { ChangeEvent } from 'react';
 import AlertMessage from './Alerts';
 
 export interface Props {
@@ -9,7 +9,7 @@ export interface Props {
   error: boolean | undefined;
   errorMessage?: string | undefined;
   value?: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export default function Input({
@@ -31,7 +31,7 @@ export default function Input({
         )}
         <input
           aria-describedby={`error${name}`}
-          aria-invalid={error ? 'true' : false}
+          aria-invalid={error ? 'true' : 'false'}
           autoComplete='off'
           className={error ? 'form-error' : ''}
           name={name}

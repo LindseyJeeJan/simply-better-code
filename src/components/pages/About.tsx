@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Box, Heading, Image, Page, Paragraph, Text } from 'grommet';
 
 export default function About() {

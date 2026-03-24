@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FormEvent } from 'react';
+import { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 import { Anchor, Box, Button, Heading, Page, Text, Paragraph } from 'grommet';
 import { Accessibility } from 'grommet-icons';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -10,11 +10,9 @@ import AlertMessage from '../../Alerts';
 export default function TutorialForms() {
   const tutorialName: string = Tutorials[0].title;
 
-  (function SetTitle() {
-    useEffect(() => {
-      document.title = tutorialName;
-    }, []);
-  })();
+  useEffect(() => {
+    document.title = tutorialName;
+  }, [tutorialName]);
   const codeString = `
 <form className='outlined-thing background-white padded-thing-large' noValidate>
   <fieldset>
@@ -49,6 +47,7 @@ export default function TutorialForms() {
 
 `;
 
+  const [loginSuccess, setLoginSuccess] = useState(false);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [usernameValidationError, setUsernameValidationError] = useState('');
@@ -62,11 +61,11 @@ export default function TutorialForms() {
   const resetForm = () => {
     setUsername('');
     setPassword('');
+    setLoginSuccess(false);
   };
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const name: string = (event.target as HTMLInputElement).name;
-    const value: string = (event.target as HTMLInputElement).value;
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
     if (name === 'username') {
       setUsername(value);
       setUsernameValidationError('');
@@ -93,7 +92,7 @@ export default function TutorialForms() {
       return;
     }
 
-    confirm('Login was successful.');
+    setLoginSuccess(true);
     resetForm();
     resetErrorMessages();
   };
@@ -112,7 +111,7 @@ export default function TutorialForms() {
         </Paragraph>
 
         <Paragraph fill={true} className='paragraph__no-margin'>
-          All forms have some things to consider through the lens of acccessiblity:
+          All forms have some things to consider through the lens of accessibility:
         </Paragraph>
         <Text margin='small'>
           <ul className='styled-list'>
@@ -125,7 +124,7 @@ export default function TutorialForms() {
               <span className='bold'>Instructions:</span> Requirements and/or formats are provided.
             </li>
             <li>
-              <span className='bold'>Labels:</span> A concise and accesssible label is
+              <span className='bold'>Labels:</span> A concise and accessible label is
               programmatically linked to each form field.
             </li>
             <li>
@@ -168,6 +167,9 @@ export default function TutorialForms() {
               onChange={handleInputChange}
             />
             <Button type='submit' primary label='Submit' onClick={handleFormSubmit} />
+            {loginSuccess && (
+              <AlertMessage alertType='information' message='Login was successful.' />
+            )}
           </fieldset>
         </form>
 

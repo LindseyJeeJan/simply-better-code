@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Heading, Page, Text } from 'grommet';
 
 import { Outlet } from 'react-router-dom';

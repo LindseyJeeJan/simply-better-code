@@ -5,25 +5,19 @@
   "type": "module",
   "license": "UNLICENSED",
   "dependencies": {
-    "@babel/preset-env": "^7.20.2",
-    "@babel/preset-react": "^7.18.6",
-    "@reduxjs/toolkit": "^2.11.2",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.1",
     "@testing-library/user-event": "^14.6.1",
-    "@types/jest": "^30.0.0",
     "@types/node": "^25.0.3",
+    "@types/jest": "^30.0.0",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "babel-loader": "^10.0.0",
     "grommet": "^2.29.1",
     "grommet-icons": "^4.9.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
-    "normalize": "^0.3.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "react-redux": "^9.2.0",
     "react-router-dom": "^7.11.0",
     "react-syntax-highlighter": "^16.1.0",
     "react-uuid": "^2.0.0",
@@ -42,9 +36,8 @@
     "test:ci": "vitest --run --reporter verbose",
     "lint": "eslint",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
-  "eslintConfig": {},
   "browserslist": {
     "production": [
       ">0.2%",
@@ -80,10 +73,5 @@
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }

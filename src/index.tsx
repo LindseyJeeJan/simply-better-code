@@ -1,7 +1,5 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
-// import { Provider } from 'react-redux';
 import './static/scss/main.scss';
 import App from './components/App';
 import About from './components/pages/About';
@@ -10,8 +8,6 @@ import Error from './components/pages/Error';
 import Error404 from './components/pages/Error404';
 import TutorialForms from './components/pages/tutorials/TutorialForms';
 import TutorialTodoList from './components/pages/tutorials/TutorialTodoList';
-
-// import store from 'store/store';
 
 const router = createBrowserRouter(
   [
@@ -37,8 +33,4 @@ const router = createBrowserRouter(
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-root.render(
-  // <Provider store={store}>
-  <RouterProvider router={router} />,
-  // </Provider>,
-);
+root.render(<RouterProvider router={router} />);

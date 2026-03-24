@@ -1,4 +1,3 @@
-import React from 'react';
 import { Header } from 'grommet';
 import { NavLink } from 'react-router-dom';
 import NavBar from '../components/MainNav';

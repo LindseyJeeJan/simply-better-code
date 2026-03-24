@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Heading, Page, Paragraph, Text } from 'grommet';
 import ListNav from '../MainTutorialList';
 

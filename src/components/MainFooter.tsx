@@ -1,4 +1,3 @@
-import React from 'react';
 import { Anchor, Footer, Text } from 'grommet';
 import { Github, Linkedin } from 'grommet-icons';
 
