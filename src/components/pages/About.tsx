@@ -19,9 +19,9 @@ export default function About() {
         </div>
         <div className='col-2'>
           <p>
-            Hi, I&apos;m Lindsey. I am a Front-End Developer with a strong background in both
-            design and development of responsive and accessible user interfaces for web applications.
-            My goal is always to provide the best experience to the largest possible number of users.
+            Hi, I&apos;m Lindsey. I am a Front-End Developer with a strong background in both design
+            and development of responsive and accessible user interfaces for web applications. My
+            goal is always to provide the best experience to the largest possible number of users.
           </p>
           <p>
             I enjoy creating accessible interfaces that are inclusively designed to provide an equal

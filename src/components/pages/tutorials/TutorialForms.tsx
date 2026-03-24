@@ -197,8 +197,8 @@ export default function TutorialForms() {
           The use of the <span className='code'>noValidate</span> attribute in the form element
           means that the form will not be validated by the browser itself. This can be beneficial
           for users who may be using assistive technologies that do not work well with browser-based
-          validation, or for users who have disabled browser-based validation for personal preference
-          or security reasons.
+          validation, or for users who have disabled browser-based validation for personal
+          preference or security reasons.
         </p>
 
         <div className='outlined-thing padded-thing-small'>

@@ -4,7 +4,7 @@
 
 ## Description
 
-Simply Better Code chronicles my journey in learning how to build and optimze accessibile single page applications. This SPA single page application is built with React and with accessiblity in mind.
+Simply Better Code chronicles my journey in learning how to build and optimize accessible single page applications. This SPA is built with React and with accessibility in mind.
 
 ## Deployed Application
 
@@ -42,14 +42,11 @@ If you are interested in fixing issues and contributing to this project, please 
 
 ## Technologies
 
-The application includes
-
 - [ESLint](https://eslint.org/)
-- [Grommet](https://v2.grommet.io/)
 - [Prettier](https://prettier.io/)
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Webpack](https://webpack.js.org/)
+- [Vite](https://vitejs.dev/)
 - [Yarn](https://yarnpkg.com/)
 
 ## Questions
