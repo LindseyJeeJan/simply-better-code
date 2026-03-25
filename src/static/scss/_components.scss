@@ -1,10 +1,10 @@
 @use 'variables' as *;
 
 .code-box {
-  margin: 10px 0;
+  margin: 1.5rem 0;
 
   pre {
-    border-radius: 3px;
+    border-radius: $border-radius-base;
   }
 }
 
@@ -25,43 +25,71 @@
 
 .nav-list {
   margin: 0;
+  padding: 0;
   width: 100%;
 
   .nav-list__item {
-    &::after {
-      content: '';
-      display: block;
+    border-bottom: 1px solid $gray-color-light;
+
+    &:first-child {
+      border-top: 1px solid $gray-color-light;
     }
 
     .nav-list__link {
-      align-items: center;
-      border-bottom: 1px solid $gray-color-light;
       display: flex;
-      padding: 1rem;
-      transition-duration: 150ms;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 0;
+      color: $dark-color !important;
+      text-decoration: none !important;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: color 120ms;
 
-      &:hover {
-        background-color: #e2f3fd;
+      &::after {
+        content: '→';
+        font-family: sans-serif;
+        font-weight: 400;
+        color: $gray-color;
+        transition: transform 120ms, color 120ms;
+        flex-shrink: 0;
+        margin-left: 1rem;
       }
 
-      svg {
-        margin-right: 10px;
+      &:hover {
+        color: $contrast-color !important;
 
-        path {
-          stroke: $link-color;
+        &::after {
+          color: $contrast-color;
+          transform: translateX(4px);
         }
       }
 
       &:focus-visible {
-        background-color: #eee2f0;
+        outline: 3px solid $focus-color;
+        outline-offset: 2px;
+        border-radius: $border-radius-base;
       }
     }
   }
 }
 
+.article-tag {
+  display: block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $text-muted;
+  margin-bottom: 0.2rem;
+}
+
 .alert-message {
-  svg {
-    vertical-align: text-bottom;
-    margin-right: 5px;
-  }
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: $border-radius-base;
+  margin: 0.5rem 0;
 }

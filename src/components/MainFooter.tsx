@@ -1,7 +1,7 @@
 export default function MainFooter() {
   return (
     <footer>
-      <div>
+      <div className='footer-links'>
         <a href='https://github.com/LindseyJeeJan' aria-label='Lindsey Lauria GitHub account'>
           <svg
             aria-hidden='true'

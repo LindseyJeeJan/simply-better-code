@@ -1,13 +1,16 @@
-$border-radius-base: 6px;
+$border-radius-base: 4px;
 $font-size-base: 16px;
 
-$off-white-color: whitesmoke;
-$dark-color: #282c34;
-$contrast-color: #3465c0;
-$error-color: #cc0000;
-$focus-color: #006ba8;
-$gray-color: #666;
-$gray-color-light: #dfdfdf;
+$body-bg: #f8f6f1;
+$off-white-color: #f8f6f1;
+$dark-color: #1a1614;
+$header-bg: #1a1614;
+$text-muted: #6b6460;
+$contrast-color: #1d4ed8;
+$error-color: #c0392b;
+$focus-color: #1d4ed8;
+$gray-color: #7c7570;
+$gray-color-light: #e2ddd8;
 $link-color: $focus-color;
 
 $xsmall: 5px;

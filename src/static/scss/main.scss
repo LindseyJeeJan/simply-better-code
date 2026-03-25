@@ -7,15 +7,6 @@
 @use 'typography';
 @use 'variables' as *;
 
-.App-logo {
-  height: 10vmin;
-  opacity: 0.5;
-  pointer-events: none;
-  g {
-    fill: $contrast-color;
-  }
-}
-
 a,
 button,
 input,
@@ -26,36 +17,71 @@ textarea {
   }
   &:focus-visible {
     outline: 3px solid $focus-color;
+    outline-offset: 2px;
   }
 }
 
 a {
-  color: $focus-color !important;
+  color: $link-color;
   cursor: pointer;
-  font-weight: normal !important;
-  text-decoration: underline !important;
+  font-weight: 500;
+  text-decoration: underline;
   text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  transition: color 120ms;
 
-  &:focus-visible {
-    background-color: #eee2f0;
+  &:hover {
+    color: darken($link-color, 12%);
   }
 }
 
 header {
   a {
-    color: $off-white-color !important;
+    color: rgba(248, 246, 241, 0.9) !important;
+    text-decoration: none !important;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+
     &:hover {
-      text-underline-offset: 3px;
-      transition-duration: 50ms;
+      color: $off-white-color !important;
     }
   }
 }
 
+.btn-primary {
+  background-color: $dark-color;
+  border: none;
+  border-radius: $border-radius-base;
+  color: $off-white-color;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.65rem 1.5rem;
+  transition: background-color 150ms;
+  text-decoration: none !important;
+
+  &:hover {
+    background-color: #2d2522;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $focus-color;
+    outline-offset: 2px;
+  }
+}
+
 .input-group {
-  margin: 10px 0 20px 0;
+  margin: 0.5rem 0 1.25rem;
 
   label {
     display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
     margin: 5px 0;
   }
 }
@@ -63,10 +89,20 @@ header {
 input {
   &[type='text'],
   &[type='password'] {
-    border: 2px solid $gray-color;
+    border: 1.5px solid #c5bfb9;
     border-radius: $border-radius-base;
-    padding: 10px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    padding: 0.6rem 0.75rem;
     width: 100%;
+    background-color: white;
+    transition: border-color 120ms;
+
+    &:focus-visible {
+      border-color: $focus-color;
+      outline: 3px solid rgba($focus-color, 0.2);
+      outline-offset: 0;
+    }
 
     &.form-error {
       border-color: $error-color;
@@ -81,36 +117,12 @@ input {
   &-error {
     color: $error-color;
   }
-
-  &-info,
-  &-error {
-    display: flex;
-    align-items: center;
-
-    svg {
-      vertical-align: baseline;
-      width: 18px;
-      height: 18px;
-      margin-right: 5px;
-    }
-  }
 }
 
-.btn-primary {
-  background-color: $contrast-color;
-  border: none;
-  border-radius: $border-radius-base;
-  color: white;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 0.6rem 1.5rem;
-  transition: background-color 150ms;
-  text-decoration: none !important;
-
-  &:hover {
-    background-color: #2a54a8;
-  }
+.message-error {
+  color: $error-color;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.875rem;
 }
 
 .background-white {
@@ -129,6 +141,6 @@ input {
     padding: 30px;
   }
   &-small {
-    padding: 15px;
+    padding: 1rem 1.25rem;
   }
 }

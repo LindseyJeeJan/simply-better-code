@@ -4,8 +4,8 @@ import NavBar from '../components/MainNav';
 export default function MainHeader() {
   return (
     <header>
-      <NavLink to='/' replace aria-label='home page'>
-        Simply Better Code
+      <NavLink to='/' replace aria-label='home page' className='site-name'>
+        simply better code
       </NavLink>
       <NavBar />
     </header>
