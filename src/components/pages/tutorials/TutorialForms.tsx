@@ -1,12 +1,12 @@
 import { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import Tutorials from './TutorialsData';
+import { getTutorialTitle } from './TutorialsData';
 import Input from '../../Input';
 import AlertMessage from '../../Alerts';
 
 export default function TutorialForms() {
-  const tutorialName: string = Tutorials[0].title;
+  const tutorialName: string = getTutorialTitle('tutorials/tutorial-forms');
 
   useEffect(() => {
     document.title = tutorialName;

@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
-import Tutorials from './TutorialsData';
+import { getTutorialTitle } from './TutorialsData';
 import TodoList from './TutorialsTodos';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export default function TutorialTodoList() {
-  const tutorialName: string = Tutorials[1].title;
+  const tutorialName: string = getTutorialTitle('tutorials/tutorial-todo-list');
 
   useEffect(() => {
     document.title = tutorialName;
