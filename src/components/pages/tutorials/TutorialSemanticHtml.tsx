@@ -43,16 +43,17 @@ export default function TutorialSemanticHtml() {
       <h1 className='tutorial-heading'>{tutorialName}</h1>
       <div className='tutorial-content'>
         <p>
-          Semantic HTML means using elements that describe the meaning of your content, not just
-          its appearance. When you use the right element, browsers and assistive technologies
-          understand the structure of your page — and users benefit.
+          Semantic HTML means using elements that describe the meaning of your content, not just its
+          appearance. When you use the right element, browsers and assistive technologies understand
+          the structure of your page — and users benefit.
         </p>
 
         <h2>The problem with div soup</h2>
         <p>
           React makes it easy to wrap everything in a <span className='code'>&lt;div&gt;</span>.
           Divs are neutral — they carry no meaning to screen readers or browsers. A user navigating
-          by keyboard or screen reader gets no clues about what a div does or how to interact with it.
+          by keyboard or screen reader gets no clues about what a div does or how to interact with
+          it.
         </p>
 
         <div className='code-box'>
@@ -62,9 +63,9 @@ export default function TutorialSemanticHtml() {
         </div>
 
         <p>
-          A <span className='code'>&lt;button&gt;</span> is focusable by keyboard, activatable
-          by pressing Enter or Space, and announced as &quot;button&quot; by screen readers — for free, with
-          no extra work. A <span className='code'>&lt;div onClick&gt;</span> does none of that.
+          A <span className='code'>&lt;button&gt;</span> is focusable by keyboard, activatable by
+          pressing Enter or Space, and announced as &quot;button&quot; by screen readers — for free,
+          with no extra work. A <span className='code'>&lt;div onClick&gt;</span> does none of that.
         </p>
 
         <div className='code-box'>
@@ -77,8 +78,7 @@ export default function TutorialSemanticHtml() {
         <p>
           HTML5 landmark elements let screen reader users jump directly to key sections of a page.
           Use <span className='code'>&lt;header&gt;</span>,{' '}
-          <span className='code'>&lt;nav&gt;</span>,{' '}
-          <span className='code'>&lt;main&gt;</span>,{' '}
+          <span className='code'>&lt;nav&gt;</span>, <span className='code'>&lt;main&gt;</span>,{' '}
           <span className='code'>&lt;article&gt;</span>,{' '}
           <span className='code'>&lt;section&gt;</span>, and{' '}
           <span className='code'>&lt;footer&gt;</span> to structure your page.

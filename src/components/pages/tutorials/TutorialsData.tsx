@@ -5,15 +5,51 @@ export interface Tutorial {
 }
 
 const TutorialsData: Tutorial[] = [
-  { href: 'tutorials/tutorial-forms', title: 'Build accessible forms with React', category: 'component' },
-  { href: 'tutorials/tutorial-todo-list', title: 'Build an accessible todo list with React', category: 'component' },
-  { href: 'tutorials/tutorial-semantic-html', title: 'Semantic HTML in React', category: 'foundational' },
-  { href: 'tutorials/tutorial-aria', title: 'Understanding ARIA in React', category: 'foundational' },
-  { href: 'tutorials/tutorial-keyboard-navigation', title: 'Keyboard Navigation in React', category: 'foundational' },
-  { href: 'tutorials/tutorial-modal', title: 'Build an Accessible Modal in React', category: 'component' },
-  { href: 'tutorials/tutorial-navigation-menu', title: 'Build an Accessible Navigation Menu in React', category: 'component' },
-  { href: 'tutorials/tutorial-accordion', title: 'Build an Accessible Accordion in React', category: 'component' },
-  { href: 'tutorials/tutorial-alerts', title: 'Build Accessible Alerts and Notifications in React', category: 'component' },
+  {
+    href: 'tutorials/tutorial-forms',
+    title: 'Build accessible forms with React',
+    category: 'component',
+  },
+  {
+    href: 'tutorials/tutorial-todo-list',
+    title: 'Build an accessible todo list with React',
+    category: 'component',
+  },
+  {
+    href: 'tutorials/tutorial-semantic-html',
+    title: 'Semantic HTML in React',
+    category: 'foundational',
+  },
+  {
+    href: 'tutorials/tutorial-aria',
+    title: 'Understanding ARIA in React',
+    category: 'foundational',
+  },
+  {
+    href: 'tutorials/tutorial-keyboard-navigation',
+    title: 'Keyboard Navigation in React',
+    category: 'foundational',
+  },
+  {
+    href: 'tutorials/tutorial-modal',
+    title: 'Build an Accessible Modal in React',
+    category: 'component',
+  },
+  {
+    href: 'tutorials/tutorial-navigation-menu',
+    title: 'Build an Accessible Navigation Menu in React',
+    category: 'component',
+  },
+  {
+    href: 'tutorials/tutorial-accordion',
+    title: 'Build an Accessible Accordion in React',
+    category: 'component',
+  },
+  {
+    href: 'tutorials/tutorial-alerts',
+    title: 'Build Accessible Alerts and Notifications in React',
+    category: 'component',
+  },
 ];
 
 export function getTutorialTitle(href: string): string {
