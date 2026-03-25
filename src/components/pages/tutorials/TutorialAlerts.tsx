@@ -94,7 +94,7 @@ export default function TutorialAlerts() {
           Here is the <span className='code'>AlertMessage</span> component used throughout this
           site. It uses <span className='code'>role=&quot;alert&quot;</span> for error messages —
           which implicitly sets <span className='code'>aria-live=&quot;assertive&quot;</span> — and
-          renders nothing when no message is provided.
+          hides itself with <span className='code'>display: none</span> when no message is provided.
         </p>
 
         <AlertMessage alertType='error' message='Error: This field is required.' />

@@ -22,6 +22,16 @@ test('sets document title', () => {
   expect(document.title).toBe('Build Accessible Alerts and Notifications in React');
 });
 
+test('renders live AlertMessage examples', () => {
+  const { getByText } = render(
+    <MemoryRouter>
+      <TutorialAlerts />
+    </MemoryRouter>,
+  );
+  expect(getByText('Error: This field is required.')).toBeInTheDocument();
+  expect(getByText('Your changes have been saved.')).toBeInTheDocument();
+});
+
 test('renders at least one code block', () => {
   const { container } = render(
     <MemoryRouter>
