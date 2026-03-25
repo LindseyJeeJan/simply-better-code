@@ -1,14 +1,13 @@
 # Simply better code with React
 
+[View deployed application](https://lindseyjeejan.github.io/simply-better-code)
+
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
 ## Description
 
-Simply Better Code chronicles my journey in learning how to build and optimize accessible single page applications. This SPA is built with React and with accessibility in mind.
+Simply Better Code teaches how to build and optimize accessible single page applications. This SPA is built with React and with accessibility in mind.
 
-## Deployed Application
-
-[View application](https://lindseyjeejan.github.io/simply-better-code)
 
 ## Table of Contents
 
