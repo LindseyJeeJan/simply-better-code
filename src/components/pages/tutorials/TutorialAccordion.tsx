@@ -3,8 +3,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { getTutorialTitle } from './TutorialsData';
 
-const accordionCode = `
-import { useState } from 'react';
+const accordionCode = `import { useState } from 'react';
 
 function AccordionItem({ id, heading, children }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,8 +44,7 @@ export default function Accordion({ items }) {
       ))}
     </div>
   );
-}
-`;
+}`;
 
 export default function TutorialAccordion() {
   const tutorialName = getTutorialTitle('tutorials/tutorial-accordion');

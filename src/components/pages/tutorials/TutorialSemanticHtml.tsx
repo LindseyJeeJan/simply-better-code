@@ -3,20 +3,15 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { getTutorialTitle } from './TutorialsData';
 
-const inaccessibleCode = `
-// Avoid: div and span carry no semantic meaning
+const inaccessibleCode = `// Avoid: div and span carry no semantic meaning
 <div onClick={handleClick}>Submit</div>
-<span onClick={handleNav}>Home</span>
-`;
+<span onClick={handleNav}>Home</span>`;
 
-const accessibleCode = `
-// Better: use elements that communicate purpose
+const accessibleCode = `// Better: use elements that communicate purpose
 <button onClick={handleClick}>Submit</button>
-<a href='/'>Home</a>
-`;
+<a href='/'>Home</a>`;
 
-const structureCode = `
-<header>
+const structureCode = `<header>
   <nav aria-label='main navigation'>...</nav>
 </header>
 <main>
@@ -28,8 +23,7 @@ const structureCode = `
     </section>
   </article>
 </main>
-<footer>...</footer>
-`;
+<footer>...</footer>`;
 
 export default function TutorialSemanticHtml() {
   const tutorialName = getTutorialTitle('tutorials/tutorial-semantic-html');

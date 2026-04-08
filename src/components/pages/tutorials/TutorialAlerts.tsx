@@ -4,32 +4,26 @@ import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { getTutorialTitle } from './TutorialsData';
 import AlertMessage from '../../Alerts';
 
-const politeCode = `
-{/* aria-live="polite": screen reader waits for the user to finish
+const politeCode = `{/* aria-live="polite": screen reader waits for the user to finish
     their current task before announcing the new content.
     Use for non-urgent notifications. */}
 <div aria-live='polite' aria-atomic='true'>
   {statusMessage && <p>{statusMessage}</p>}
-</div>
-`;
+</div>`;
 
-const assertiveCode = `
-{/* aria-live="assertive": screen reader interrupts immediately
+const assertiveCode = `{/* aria-live="assertive": screen reader interrupts immediately
     to announce the new content.
     Use sparingly; only for urgent errors. */}
 <div aria-live='assertive' aria-atomic='true'>
   {errorMessage && <p role='alert'>{errorMessage}</p>}
-</div>
-`;
+</div>`;
 
-const atomicCode = `
-{/* aria-atomic="true": announces the entire region contents
+const atomicCode = `{/* aria-atomic="true": announces the entire region contents
     when anything inside changes, not just the changed node.
     Prevents partial announcements. */}
 <div aria-live='polite' aria-atomic='true'>
   <p>{message}</p>
-</div>
-`;
+</div>`;
 
 export default function TutorialAlerts() {
   const tutorialName = getTutorialTitle('tutorials/tutorial-alerts');

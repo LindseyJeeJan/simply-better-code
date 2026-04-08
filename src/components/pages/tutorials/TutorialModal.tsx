@@ -3,8 +3,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { getTutorialTitle } from './TutorialsData';
 
-const modalMarkupCode = `
-{isOpen && (
+const modalMarkupCode = `{isOpen && (
   <div
     role='dialog'
     aria-modal='true'
@@ -18,11 +17,9 @@ const modalMarkupCode = `
     <button onClick={handleConfirm}>Delete</button>
     <button onClick={handleClose}>Cancel</button>
   </div>
-)}
-`;
+)}`;
 
-const focusCode = `
-import { useEffect, useRef } from 'react';
+const focusCode = `import { useEffect, useRef } from 'react';
 
 export default function Modal({ isOpen, onClose, triggerRef }) {
   const modalRef = useRef(null);
@@ -63,8 +60,7 @@ export default function Modal({ isOpen, onClose, triggerRef }) {
       {/* ... */}
     </div>
   );
-}
-`;
+}`;
 
 export default function TutorialModal() {
   const tutorialName = getTutorialTitle('tutorials/tutorial-modal');

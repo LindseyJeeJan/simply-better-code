@@ -3,8 +3,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { getTutorialTitle } from './TutorialsData';
 
-const skipLinkCode = `
-/* CSS: visually hidden until focused */
+const skipLinkCode = `/* CSS: visually hidden until focused */
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -12,11 +11,9 @@ const skipLinkCode = `
 .skip-link:focus {
   left: 0;
   top: 0;
-}
-`;
+}`;
 
-const skipLinkJsxCode = `
-<a href='#main-content' className='skip-link'>
+const skipLinkJsxCode = `<a href='#main-content' className='skip-link'>
   Skip to main content
 </a>
 
@@ -24,11 +21,9 @@ const skipLinkJsxCode = `
 
 <main id='main-content'>
   {/* page content */}
-</main>
-`;
+</main>`;
 
-const navLandmarkCode = `
-<header>
+const navLandmarkCode = `<header>
   <nav aria-label='main navigation'>
     <ul>
       <li><a href='/'>Home</a></li>
@@ -36,11 +31,9 @@ const navLandmarkCode = `
       <li><a href='/articles'>Articles</a></li>
     </ul>
   </nav>
-</header>
-`;
+</header>`;
 
-const dropdownCode = `
-import { useState } from 'react';
+const dropdownCode = `import { useState } from 'react';
 
 export default function NavDropdown({ label, items }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,8 +64,7 @@ export default function NavDropdown({ label, items }) {
       )}
     </li>
   );
-}
-`;
+}`;
 
 export default function TutorialNavigationMenu() {
   const tutorialName = getTutorialTitle('tutorials/tutorial-navigation-menu');

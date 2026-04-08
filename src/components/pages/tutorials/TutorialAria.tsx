@@ -3,37 +3,29 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { getTutorialTitle } from './TutorialsData';
 
-const wrongAriaCode = `
-// Avoid: native button already has role="button"
+const wrongAriaCode = `// Avoid: native button already has role="button"
 <button role='button' aria-label='Submit form'>Submit</button>
 
 // Avoid: aria-label on a div that isn't interactive
-<div aria-label='wrapper'>...</div>
-`;
+<div aria-label='wrapper'>...</div>`;
 
-const ariaLabelCode = `
-// Use aria-label when there is no visible text label
+const ariaLabelCode = `// Use aria-label when there is no visible text label
 <button aria-label='Close dialog'>
   <svg aria-hidden='true'>...</svg>
-</button>
-`;
+</button>`;
 
-const ariaLabelledbyCode = `
-// Use aria-labelledby to reference visible text as the label
+const ariaLabelledbyCode = `// Use aria-labelledby to reference visible text as the label
 <section aria-labelledby='section-heading'>
   <h2 id='section-heading'>Recent Activity</h2>
   <p>...</p>
-</section>
-`;
+</section>`;
 
-const ariaDescribedbyCode = `
-// Use aria-describedby for supplementary descriptions
+const ariaDescribedbyCode = `// Use aria-describedby for supplementary descriptions
 <input
   type='password'
   aria-describedby='password-hint'
 />
-<p id='password-hint'>Must be at least 8 characters.</p>
-`;
+<p id='password-hint'>Must be at least 8 characters.</p>`;
 
 export default function TutorialAria() {
   const tutorialName = getTutorialTitle('tutorials/tutorial-aria');

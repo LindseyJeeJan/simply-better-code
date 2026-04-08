@@ -3,23 +3,18 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { getTutorialTitle } from './TutorialsData';
 
-const brokenKeyboardCode = `
-// Avoid: div with onClick is not keyboard accessible
+const brokenKeyboardCode = `// Avoid: div with onClick is not keyboard accessible
 <div onClick={handleDelete} className='delete-icon'>
   ✕
-</div>
-`;
+</div>`;
 
-const fixedKeyboardCode = `
-// Better: button is focusable and activatable by keyboard
+const fixedKeyboardCode = `// Better: button is focusable and activatable by keyboard
 <button onClick={handleDelete} className='delete-icon'>
   <span aria-hidden='true'>✕</span>
   <span className='visually-hidden'>Delete item</span>
-</button>
-`;
+</button>`;
 
-const tabIndexCode = `
-// tabIndex={0}: adds element to natural tab order
+const tabIndexCode = `// tabIndex={0}: adds element to natural tab order
 <div role='button' tabIndex={0} onClick={handleClick} onKeyDown={handleKeyDown}>
   Custom control
 </div>
@@ -31,11 +26,9 @@ const tabIndexCode = `
 </div>
 
 // Avoid tabIndex > 0; it overrides the natural tab order
-// and creates a confusing experience for keyboard users
-`;
+// and creates a confusing experience for keyboard users`;
 
-const focusVisibleCode = `
-/* Always provide a visible focus indicator */
+const focusVisibleCode = `/* Always provide a visible focus indicator */
 :focus-visible {
   outline: 2px solid #005fcc;
   outline-offset: 2px;
@@ -44,8 +37,7 @@ const focusVisibleCode = `
 /* Don't do this; it removes focus visibility entirely */
 :focus {
   outline: none;
-}
-`;
+}`;
 
 export default function TutorialKeyboardNavigation() {
   const tutorialName = getTutorialTitle('tutorials/tutorial-keyboard-navigation');
