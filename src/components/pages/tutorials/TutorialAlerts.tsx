@@ -16,7 +16,7 @@ const politeCode = `
 const assertiveCode = `
 {/* aria-live="assertive": screen reader interrupts immediately
     to announce the new content.
-    Use sparingly — only for urgent errors. */}
+    Use sparingly; only for urgent errors. */}
 <div aria-live='assertive' aria-atomic='true'>
   {errorMessage && <p role='alert'>{errorMessage}</p>}
 </div>
@@ -43,8 +43,8 @@ export default function TutorialAlerts() {
       <h1 className='tutorial-heading'>{tutorialName}</h1>
       <div className='tutorial-content'>
         <p>
-          When content on a page changes dynamically — a form error appears, a success message
-          shows, a notification arrives — sighted users see it immediately. Screen reader users miss
+          When content on a page changes dynamically, a form error appears, a success message
+          shows, a notification arrives, sighted users see it immediately. Screen reader users miss
           it unless you explicitly tell the browser to announce it. That&apos;s what{' '}
           <span className='code'>aria-live</span> regions are for.
         </p>
@@ -64,7 +64,7 @@ export default function TutorialAlerts() {
 
         <h2>aria-live=&quot;assertive&quot;</h2>
         <p>
-          An assertive live region interrupts the screen reader immediately. Use it sparingly — only
+          An assertive live region interrupts the screen reader immediately. Use it sparingly; only
           for time-sensitive errors where the user must act now. Overusing assertive regions creates
           a confusing, interruption-heavy experience.
         </p>
@@ -92,8 +92,8 @@ export default function TutorialAlerts() {
         <h2>Example: AlertMessage component</h2>
         <p>
           Here is the <span className='code'>AlertMessage</span> component used throughout this
-          site. It uses <span className='code'>role=&quot;alert&quot;</span> for error messages —
-          which implicitly sets <span className='code'>aria-live=&quot;assertive&quot;</span> — and
+          site. It uses <span className='code'>role=&quot;alert&quot;</span> for error messages,
+          which implicitly sets <span className='code'>aria-live=&quot;assertive&quot;</span>, and
           hides itself with <span className='code'>display: none</span> when no message is provided.
         </p>
 

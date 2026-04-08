@@ -94,8 +94,8 @@ export default function TutorialAria() {
 
         <h2>aria-describedby</h2>
         <p>
-          Use <span className='code'>aria-describedby</span> for supplementary information — a hint,
-          constraint, or error message — that provides more detail beyond the label.
+          Use <span className='code'>aria-describedby</span> for supplementary information, a hint,
+          constraint, or error message, that provides more detail beyond the label.
         </p>
 
         <div className='code-box'>

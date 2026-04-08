@@ -19,18 +19,18 @@ const fixedKeyboardCode = `
 `;
 
 const tabIndexCode = `
-// tabIndex={0} — adds element to natural tab order
+// tabIndex={0}: adds element to natural tab order
 <div role='button' tabIndex={0} onClick={handleClick} onKeyDown={handleKeyDown}>
   Custom control
 </div>
 
-// tabIndex={-1} — focusable programmatically, not via Tab key
+// tabIndex={-1}: focusable programmatically, not via Tab key
 // Useful for managing focus in modals or menus
 <div ref={dialogRef} tabIndex={-1}>
   Dialog content
 </div>
 
-// Avoid tabIndex > 0 — it overrides the natural tab order
+// Avoid tabIndex > 0; it overrides the natural tab order
 // and creates a confusing experience for keyboard users
 `;
 
@@ -41,7 +41,7 @@ const focusVisibleCode = `
   outline-offset: 2px;
 }
 
-/* Don't do this — it removes focus visibility entirely */
+/* Don't do this; it removes focus visibility entirely */
 :focus {
   outline: none;
 }
@@ -59,7 +59,7 @@ export default function TutorialKeyboardNavigation() {
       <h1 className='tutorial-heading'>{tutorialName}</h1>
       <div className='tutorial-content'>
         <p>
-          Many users navigate entirely by keyboard — people with motor disabilities, power users,
+          Many users navigate entirely by keyboard, people with motor disabilities, power users,
           and anyone using a screen reader. If your React components aren&apos;t keyboard
           accessible, these users are locked out.
         </p>
@@ -67,8 +67,8 @@ export default function TutorialKeyboardNavigation() {
         <h2>How keyboard navigation works</h2>
         <p>
           Users press <span className='code'>Tab</span> to move forward through focusable elements
-          and <span className='code'>Shift+Tab</span> to move backward. Interactive elements —
-          links, buttons, inputs, selects — are focusable by default. Divs and spans are not.
+          and <span className='code'>Shift+Tab</span> to move backward. Interactive elements,
+          links, buttons, inputs, selects, are focusable by default. Divs and spans are not.
         </p>
 
         <h2>The div onClick problem</h2>
@@ -109,8 +109,8 @@ export default function TutorialKeyboardNavigation() {
 
         <h2>Visible focus indicators</h2>
         <p>
-          Keyboard users rely on the focus indicator — the visible outline around the focused
-          element — to know where they are on the page. Removing it with{' '}
+          Keyboard users rely on the focus indicator, the visible outline around the focused
+          element, to know where they are on the page. Removing it with{' '}
           <span className='code'>outline: none</span> is one of the most common accessibility
           mistakes in CSS. Use <span className='code'>:focus-visible</span> to show a clear
           indicator for keyboard users without affecting mouse users.

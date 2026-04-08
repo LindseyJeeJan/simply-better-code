@@ -45,13 +45,13 @@ export default function TutorialSemanticHtml() {
         <p>
           Semantic HTML means using elements that describe the meaning of your content, not just its
           appearance. When you use the right element, browsers and assistive technologies understand
-          the structure of your page — and users benefit.
+          the structure of your page, and users benefit.
         </p>
 
         <h2>The problem with div soup</h2>
         <p>
           React makes it easy to wrap everything in a <span className='code'>&lt;div&gt;</span>.
-          Divs are neutral — they carry no meaning to screen readers or browsers. A user navigating
+          Divs are neutral; they carry no meaning to screen readers or browsers. A user navigating
           by keyboard or screen reader gets no clues about what a div does or how to interact with
           it.
         </p>
@@ -64,7 +64,7 @@ export default function TutorialSemanticHtml() {
 
         <p>
           A <span className='code'>&lt;button&gt;</span> is focusable by keyboard, activatable by
-          pressing Enter or Space, and announced as &quot;button&quot; by screen readers — for free,
+          pressing Enter or Space, and announced as &quot;button&quot; by screen readers, for free,
           with no extra work. A <span className='code'>&lt;div onClick&gt;</span> does none of that.
         </p>
 
@@ -93,7 +93,7 @@ export default function TutorialSemanticHtml() {
         <p>
           The rule of thumb: if a native HTML element exists for what you&apos;re building, use it.
           Semantic elements come with accessibility built in. Custom elements require you to rebuild
-          that behaviour manually with ARIA — and it&apos;s easy to get wrong.
+          that behaviour manually with ARIA, and it&apos;s easy to get wrong.
         </p>
 
         <div className='outlined-thing padded-thing-small'>

@@ -79,7 +79,7 @@ export default function TutorialModal() {
       <div className='tutorial-content'>
         <p>
           Modals are one of the most common sources of accessibility problems in React apps. When a
-          modal opens, keyboard and screen reader users need to be inside it — not left behind on
+          modal opens, keyboard and screen reader users need to be inside it, not left behind on
           the page underneath. When it closes, they need to return to where they started.
         </p>
 
@@ -107,7 +107,7 @@ export default function TutorialModal() {
         </p>
 
         <p>
-          Close the modal when the user presses <span className='code'>Escape</span> — this is the
+          Close the modal when the user presses <span className='code'>Escape</span>; this is the
           expected keyboard interaction for any dialog.
         </p>
 
