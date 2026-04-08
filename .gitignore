@@ -18,6 +18,9 @@
 # Superpowers specs (local planning docs)
 docs/superpowers/
 
+# Playwright MCP output
+.playwright-mcp/
+
 # misc
 .DS_Store
 .env
