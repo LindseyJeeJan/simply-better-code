@@ -9,7 +9,7 @@ test('every tutorial has href, title, and category', () => {
 });
 
 test('getTutorialTitle returns title for known slug', () => {
-  expect(getTutorialTitle('tutorials/tutorial-forms')).toBe('Build accessible forms with React');
+  expect(getTutorialTitle('tutorials/tutorial-forms')).toBe('Build Accessible Forms with React');
 });
 
 test('getTutorialTitle throws for unknown slug', () => {
