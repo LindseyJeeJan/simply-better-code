@@ -6,8 +6,8 @@ export default function Home() {
       <div className='home-hero'>
         <h1>simply better code</h1>
         <p className='home-description'>
-          A technical guide to building accessible React applications. Written for front-end
-          engineers who take inclusivity seriously.
+          A technical guide to building accessible React applications. Written for developers who
+          take inclusivity seriously.
         </p>
       </div>
       <div className='home-articles'>

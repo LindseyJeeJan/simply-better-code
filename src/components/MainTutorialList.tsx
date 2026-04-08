@@ -3,7 +3,7 @@ import TutorialsData from './pages/tutorials/TutorialsData';
 
 export default function MainTutorialList() {
   const sorted = [...TutorialsData].sort((a, b) =>
-    a.category === b.category ? 0 : a.category === 'foundational' ? -1 : 1
+    a.category === b.category ? 0 : a.category === 'foundational' ? -1 : 1,
   );
 
   return (
