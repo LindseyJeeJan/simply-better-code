@@ -7,12 +7,12 @@ export interface Tutorial {
 const TutorialsData: Tutorial[] = [
   {
     href: 'tutorials/tutorial-forms',
-    title: 'Build accessible forms with React',
+    title: 'Build Accessible Forms with React',
     category: 'component',
   },
   {
     href: 'tutorials/tutorial-todo-list',
-    title: 'Build an accessible todo list with React',
+    title: 'Build an Accessible Todo List with React',
     category: 'component',
   },
   {
