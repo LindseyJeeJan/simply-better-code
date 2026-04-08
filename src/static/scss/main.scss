@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use 'core/normalize';
 @use 'core/reset';
 @use 'base';
@@ -31,7 +32,7 @@ a {
   transition: color 120ms;
 
   &:hover {
-    color: darken($link-color, 12%);
+    color: color.adjust($link-color, $lightness: -12%);
   }
 }
 
