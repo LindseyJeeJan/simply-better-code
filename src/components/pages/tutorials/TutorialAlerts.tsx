@@ -43,9 +43,9 @@ export default function TutorialAlerts() {
       <h1 className='tutorial-heading'>{tutorialName}</h1>
       <div className='tutorial-content'>
         <p>
-          When content on a page changes dynamically, a form error appears, a success message
-          shows, a notification arrives, sighted users see it immediately. Screen reader users miss
-          it unless you explicitly tell the browser to announce it. That&apos;s what{' '}
+          When content on a page changes dynamically, a form error appears, a success message shows,
+          a notification arrives, sighted users see it immediately. Screen reader users miss it
+          unless you explicitly tell the browser to announce it. That&apos;s what{' '}
           <span className='code'>aria-live</span> regions are for.
         </p>
 

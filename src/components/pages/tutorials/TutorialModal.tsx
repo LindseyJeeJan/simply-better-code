@@ -79,8 +79,8 @@ export default function TutorialModal() {
       <div className='tutorial-content'>
         <p>
           Modals are one of the most common sources of accessibility problems in React apps. When a
-          modal opens, keyboard and screen reader users need to be inside it, not left behind on
-          the page underneath. When it closes, they need to return to where they started.
+          modal opens, keyboard and screen reader users need to be inside it, not left behind on the
+          page underneath. When it closes, they need to return to where they started.
         </p>
 
         <h2>Markup: role and aria attributes</h2>

@@ -59,16 +59,16 @@ export default function TutorialKeyboardNavigation() {
       <h1 className='tutorial-heading'>{tutorialName}</h1>
       <div className='tutorial-content'>
         <p>
-          Many users navigate entirely by keyboard, people with motor disabilities, power users,
-          and anyone using a screen reader. If your React components aren&apos;t keyboard
-          accessible, these users are locked out.
+          Many users navigate entirely by keyboard, people with motor disabilities, power users, and
+          anyone using a screen reader. If your React components aren&apos;t keyboard accessible,
+          these users are locked out.
         </p>
 
         <h2>How keyboard navigation works</h2>
         <p>
           Users press <span className='code'>Tab</span> to move forward through focusable elements
-          and <span className='code'>Shift+Tab</span> to move backward. Interactive elements,
-          links, buttons, inputs, selects, are focusable by default. Divs and spans are not.
+          and <span className='code'>Shift+Tab</span> to move backward. Interactive elements, links,
+          buttons, inputs, selects, are focusable by default. Divs and spans are not.
         </p>
 
         <h2>The div onClick problem</h2>
