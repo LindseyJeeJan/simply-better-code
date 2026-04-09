@@ -125,6 +125,10 @@
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: $text-muted;
+
+    @include phone-breakpoint {
+      font-size: 1rem;
+    }
   }
 
   &__title {
@@ -145,6 +149,10 @@
   text-transform: uppercase;
   color: $text-muted;
   margin-bottom: 0.2rem;
+
+  @include phone-breakpoint {
+    font-size: 1rem;
+  }
 }
 
 .alert-message {
@@ -153,4 +161,8 @@
   padding: 0.6rem 0.8rem;
   border-radius: $border-radius-base;
   margin: 0.5rem 0;
+
+  @include phone-breakpoint {
+    font-size: 1rem;
+  }
 }

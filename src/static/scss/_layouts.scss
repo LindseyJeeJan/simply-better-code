@@ -49,6 +49,10 @@
     text-transform: uppercase;
     color: $text-muted;
     margin-bottom: 0.25rem;
+
+    @include phone-breakpoint {
+      font-size: 1rem;
+    }
   }
 }
 

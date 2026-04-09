@@ -4,7 +4,7 @@
 @use 'base';
 @use 'components';
 @use 'layouts';
-@use 'mixins';
+@use 'mixins' as *;
 @use 'typography';
 @use 'variables' as *;
 
@@ -73,6 +73,10 @@ header {
     outline: 3px solid $focus-color;
     outline-offset: 2px;
   }
+
+  @include phone-breakpoint {
+    font-size: 1rem;
+  }
 }
 
 .input-group {
@@ -84,6 +88,10 @@ header {
     font-size: 0.9rem;
     font-weight: 600;
     margin: 5px 0;
+
+    @include phone-breakpoint {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -108,6 +116,10 @@ input {
     &.form-error {
       border-color: $error-color;
     }
+
+    @include phone-breakpoint {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -124,6 +136,10 @@ input {
   color: $error-color;
   font-family: 'Outfit', sans-serif;
   font-size: 0.875rem;
+
+  @include phone-breakpoint {
+    font-size: 1rem;
+  }
 }
 
 .background-white {
